@@ -1,0 +1,16 @@
+body {
+    background-image: url('./images/bar.avif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+};
+
+h1 {
+    background-color: red;
+}
+
+div#game-ui {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+}
