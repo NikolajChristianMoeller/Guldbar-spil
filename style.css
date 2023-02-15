@@ -1,3 +1,27 @@
+#screen
+
+
+
+
+
+#game
+
+
+
+
+#start
+
+
+
+#game_over
+
+
+
+
+#level_complete
+
+
+
 body {
     background-image: url('./images/bar.avif');
     background-repeat: no-repeat;
@@ -12,5 +36,5 @@ h1 {
 div#game-ui {
     display: grid;
     grid-template-columns: auto auto auto;
-    
+
 }
