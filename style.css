@@ -142,3 +142,7 @@ position: absolute;
     grid-template-columns: auto auto auto;
 
 }
+
+#hjerte {
+    max-width: 80px;
+}
