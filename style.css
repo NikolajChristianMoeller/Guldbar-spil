@@ -8,6 +8,8 @@ body {
     height: 100%;
 }
 
+
+
 #game_elements_cola {
     z-index: 1;
     border-width: 2px;
@@ -102,7 +104,16 @@ width: 100px;
 
 
 
+#bærbar {
+    top: 0px;
+    left: 10px;
+}
 
+#bærbar_container img {
+    width: 30%;
+    height: 20%;
+    top: 20%;
+}
 
 
 
@@ -137,17 +148,19 @@ width: 100%;
 z-index: -1;
 position: absolute;
 }
-
+/*
 #game-ui {
     display: grid;
     grid-template-columns: auto auto auto;
 
 }
 
+*/
+
 #hjerte1_container {
 
     top: 5%;
-    left: 85%;
+    right: -40%;
     z-index: 2;
     position: absolute;
 }
@@ -155,7 +168,7 @@ position: absolute;
 #hjerte2_container {
 
     top: 5%;
-    left: 75%;
+    right: -35%;
     z-index: 2;
     position: absolute;
 }
@@ -163,7 +176,7 @@ position: absolute;
 #hjerte3_container {
 
     top: 5%;
-    left: 65%;
+    right: -30%;
     z-index: 2;
     position: absolute;
 }
@@ -184,11 +197,20 @@ position: absolute;
     max-width: 80px;
 }
 
-.timer {
-    width: 100px;
+#timer_container {
     position: absolute;
     top: 0px;
     left: 50%;
-
 }
 
+#timer_container img {
+    width: 20%;
+}
+
+#scoreboard {
+
+    top: 5%;
+    left: 5%;
+    position: absolute;
+    z-index: 2%;
+}
