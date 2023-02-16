@@ -1,13 +1,118 @@
-#screen
+body {
+    background-image: url('./images/bar.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+#game_elements_cola {
+    z-index: 1;
+    border-width: 2px;
+    border-color:black;
+    border-style: solid;
+    position: absolute;
+    left: 70%;
+}
+
+#cola {
+   width: 700px;
+    height: 600px;
+    margin-left: 750px;
+    margin-top: 590px;
+}
+
+#APC1 {
+    translate: 0 -20%;
+    scale: 0.1;
+    position: absolute;
+    z-index: 9;
+}
+
+#game_elements_fanta {
+    z-index: 1;
+    border-width: 2px;
+    border-color:black;
+    border-style: solid;
+    position: absolute;
+    left: 70%;
+}
+
+#fanta {
+   width: 700px;
+    height: 600px;
+    margin-left: 750px;
+    margin-top: 590px;
+}
+
+#APC1 {
+    translate: 0 -20%;
+    scale: 0.1;
+    position: absolute;
+    z-index: 9;
+}
+
+#game_elements_bærbar {
+    z-index: 1;
+    border-width: 2px;
+    border-color:black;
+    border-style: solid;
+    position: absolute;
+    left: 70%;
+}
+
+#bærbar {
+   width: 700px;
+    height: 600px;
+    margin-left: 750px;
+    margin-top: 590px;
+}
+
+#APC1{
+    translate: 0 -20%;
+    scale: 0.1;
+    position: absolute;
+    z-index: 9;
+}
+
+#game_elements_øl {
+    z-index: 1;
+    border-width: 2px;
+    border-color:black;
+    border-style: solid;
+    position: absolute;
+    left: 70%;
+}
+
+#øl{
+   width: 70px;
+    height: 80px;
+    margin-left: 650px;
+    margin-top: 340px;
+}
+
+#APC1{
+    translate: 0 -20%;
+    scale: 0.1;
+    position: absolute;
+    z-index: 9;
+}
 
 
 
 
 
-#game
 
 
 
+#score {
+    width: 100px;
+    position: absolute;
+    top: 0px;
+    right: 100px;
+}
 
 #start
 
@@ -22,18 +127,18 @@
 
 
 
-body {
-    background-image: url('./images/bar.avif');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-};
 
-h1 {
-    background-color: red;
+#game_background {
+background-image: url(images/bar.png);
+background-repeat: no-repeat;
+background-size: cover;
+height: 100%;
+width: 100%;
+z-index: -1;
+position: absolute;
 }
 
-div#game-ui {
+#game-ui {
     display: grid;
     grid-template-columns: auto auto auto;
 
