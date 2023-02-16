@@ -144,6 +144,42 @@ position: absolute;
 
 }
 
+#hjerte1_container {
+
+    top: 5%;
+    left: 85%;
+    z-index: 2;
+    position: absolute;
+}
+
+#hjerte2_container {
+
+    top: 5%;
+    left: 75%;
+    z-index: 2;
+    position: absolute;
+}
+
+#hjerte3_container {
+
+    top: 5%;
+    left: 65%;
+    z-index: 2;
+    position: absolute;
+}
+
+#hjerte1_container img {
+    width: 15%;
+}
+
+#hjerte2_container img {
+    width: 15%;
+}
+
+#hjerte3_container img {
+    width: 15%;
+}
+
 .hjerte {
     max-width: 80px;
 }
