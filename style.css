@@ -110,7 +110,8 @@ width: 100px;
     width: 100px;
     position: absolute;
     top: 0px;
-    right: 100px;
+    left: 10px;
+
 }
 
 #start
@@ -143,6 +144,15 @@ position: absolute;
 
 }
 
-#hjerte {
+.hjerte {
     max-width: 80px;
 }
+
+.timer {
+    width: 100px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+
+}
+
