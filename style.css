@@ -94,6 +94,12 @@ width: 100px;
     margin-top: 340px;
 }
 
+
+#øl3_container {
+
+    bottom: 30%;
+}
+
 #APC1{
     translate: 0 -20%;
     scale: 0.1;
@@ -106,7 +112,8 @@ width: 100px;
 
 #bærbar {
     top: 0px;
-    left: 10px;
+    bottom: 10px;
+    position: absolute;
 }
 
 #bærbar_container img {
