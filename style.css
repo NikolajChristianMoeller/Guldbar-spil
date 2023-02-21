@@ -55,7 +55,7 @@ width: 100px;
     z-index: 9;
 }
 
-#game_elements_bærbar {
+#game_elements_laptop {
     z-index: 1;
     border-width: 2px;
     border-color:black;
@@ -64,7 +64,7 @@ width: 100px;
     left: 70%;
 }
 
-#bærbar {
+#laptop {
    width: 700px;
     height: 600px;
     margin-left: 750px;
@@ -78,7 +78,7 @@ width: 100px;
     z-index: 9;
 }
 
-#game_elements_øl {
+#game_elements_beer {
     z-index: 1;
     border-width: 2px;
     border-color:black;
@@ -87,7 +87,7 @@ width: 100px;
     left: 70%;
 }
 
-#øl{
+#beer{
    width: 70px;
     height: 80px;
     margin-left: 650px;
@@ -95,7 +95,7 @@ width: 100px;
 }
 
 
-#øl3_container {
+#beer3_container {
 
     bottom: 30%;
 }
@@ -164,7 +164,7 @@ position: absolute;
 
 */
 
-#hjerte1_container {
+#heart1_container {
 
     top: 5%;
     right: -40%;
@@ -172,7 +172,7 @@ position: absolute;
     position: absolute;
 }
 
-#hjerte2_container {
+#heart2_container {
 
     top: 5%;
     right: -35%;
@@ -180,7 +180,7 @@ position: absolute;
     position: absolute;
 }
 
-#hjerte3_container {
+#heart3_container {
 
     top: 5%;
     right: -30%;
@@ -188,19 +188,19 @@ position: absolute;
     position: absolute;
 }
 
-#hjerte1_container img {
+#heart1_container img {
     width: 15%;
 }
 
-#hjerte2_container img {
+#heart2_container img {
     width: 15%;
 }
 
-#hjerte3_container img {
+#heart3_container img {
     width: 15%;
 }
 
-.hjerte {
+.heart {
     max-width: 80px;
 }
 
