@@ -4,122 +4,87 @@ body {
     background-attachment: fixed;
     background-size: cover;
     margin: auto;
-    width: 100%;
+}
+
+#game_background {
+    background-image: url(images/bar.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100%;
-}
-
-
-
-#game_elements_cola {
-    z-index: 1;
-    border-width: 2px;
-    border-color:black;
-    border-style: solid;
+    width: 100%;
+    z-index: -1;
     position: absolute;
-    left: 70%;
 }
 
-#cola {
-   width: 700px;
-    height: 600px;
-    margin-left: 750px;
-    margin-top: 590px;
+#cola1_container img {
+    width: 10%;
 }
 
-#APC1 {
-    translate: 0 -20%;
-    scale: 0.1;
-    position: absolute;
-    z-index: 9;
+#cola2_container img {
+    width: 10%;
 }
 
-#game_elements_fanta {
-    z-index: 1;
-    border-width: 2px;
-    border-color:black;
-    border-style: solid;
-    position: absolute;
-    left: 70%;
+#cola3_container img {
+    width: 10%;
 }
 
-#fanta {
-width: 100px;
-    height: 100px;
-    margin-left: 250px;
+#fanta1_container img {
+    width: 10%;
 }
 
-#APC1 {
-    translate: 0 -20%;
-    scale: 0.1;
-    position: absolute;
-    z-index: 9;
+#fanta2_container img {
+    width: 10%;
 }
 
-#game_elements_laptop {
-    z-index: 1;
-    border-width: 2px;
-    border-color:black;
-    border-style: solid;
-    position: absolute;
-    left: 70%;
+#fanta3_container img {
+    width: 10%;
 }
+
 
 #laptop {
-   width: 700px;
-    height: 600px;
-    margin-left: 750px;
-    margin-top: 590px;
+    
 }
 
-#APC1{
-    translate: 0 -20%;
-    scale: 0.1;
-    position: absolute;
-    z-index: 9;
-}
 
-#game_elements_beer {
+/* #game_elements_beer {
     z-index: 1;
     border-width: 2px;
     border-color:black;
     border-style: solid;
     position: absolute;
     left: 70%;
-}
+} */
 
-#beer{
-   width: 70px;
+#beer {
+    width: 70px;
     height: 80px;
     margin-left: 650px;
     margin-top: 340px;
 }
 
 
-#beer3_container {
-
-    bottom: 30%;
+#beer1_container {
+    top: auto;
+    left: 40%;
 }
 
-#APC1{
-    translate: 0 -20%;
-    scale: 0.1;
-    position: absolute;
-    z-index: 9;
+#beer1_container img {
+    width: 10%;
+}
+
+#beer2_container img {
+    width: 10%;
+}
+
+#beer3_container img {
+    width: 10%;
 }
 
 
 
-
-#bærbar {
-    top: 0px;
-    bottom: 10px;
-    position: absolute;
-}
-
-#bærbar_container img {
-    width: 30%;
-    height: 20%;
-    top: 20%;
+#laptop_container img {
+    width: 10%;
+    height: 10%;
 }
 
 
@@ -129,43 +94,9 @@ width: 100px;
     position: absolute;
     top: 0px;
     left: 10px;
-
 }
-
-#start
-
-
-
-#game_over
-
-
-
-
-#level_complete
-
-
-
-
-#game_background {
-background-image: url(images/bar.png);
-background-repeat: no-repeat;
-background-size: cover;
-height: 100%;
-width: 100%;
-z-index: -1;
-position: absolute;
-}
-/*
-#game-ui {
-    display: grid;
-    grid-template-columns: auto auto auto;
-
-}
-
-*/
 
 #heart1_container {
-
     top: 5%;
     right: -40%;
     z-index: 2;
@@ -173,7 +104,6 @@ position: absolute;
 }
 
 #heart2_container {
-
     top: 5%;
     right: -35%;
     z-index: 2;
@@ -181,7 +111,6 @@ position: absolute;
 }
 
 #heart3_container {
-
     top: 5%;
     right: -30%;
     z-index: 2;
@@ -215,9 +144,18 @@ position: absolute;
 }
 
 #scoreboard {
-
     top: 5%;
     left: 5%;
     position: absolute;
     z-index: 2%;
 }
+
+#start
+
+
+
+#game_over
+
+
+
+#level_complete
