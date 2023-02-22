@@ -28,6 +28,12 @@ function start() {
 }
 
 
+let score = 0;
+
+score += 10;
+
+let scoreElement = document.getElementById("scoreboard_container").innerHTML = "score: " + score;
+scoreboardElement.textContent = "Score: " + score;
 
 
 

@@ -6,7 +6,22 @@ body {
     margin: auto;
 }
 
+#screen {
+    aspect-ratio: 16/9;
+    display: grid;
+    grid-template: 100% / 100%;
+
+}
+
+#game {
+    grid-area: 1/1;
+    display: grid;
+    grid-template: 100% / 100%
+}
+
 #game_background {
+    display: grid;
+    grid-area: 1/1;
     background-image: url(images/bar.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,17 +31,73 @@ body {
     position: absolute;
 }
 
+#game_elements {
+    position: relative;
+    grid-area: 1 /1;
+}
+
+
+
+
+
+#cola1_container {
+    position: absolute;
+    left: 40%;
+    top: 70%;
+    width: 10%;
+}
+
+#cola2_container {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    width: 10%;
+}
+
+#cola3_container {
+    position: absolute;
+    left: 60%;
+    top: 70%;
+    width: 10%;
+}
+
+
 #cola1_container img {
-    width: 8%;
+    width: 100%;
 }
 
 #cola2_container img {
-    width: 8%;
+    width: 100%;
 }
 
 #cola3_container img {
-    width: 8%;
+    width: 100%;
 }
+
+
+#fanta1_container {
+    position: absolute;
+    left: 25%;
+    top: 75%;
+    width: 50%;
+}
+
+#fanta2_container {
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    width: 50%;
+}
+
+#fanta3_container {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    width: 50%;
+}
+
+
+
 
 #fanta1_container img {
     width: 8%;
@@ -40,62 +111,95 @@ body {
     width: 8%;
 }
 
-#beer {
-    width: 70px;
-    height: 80px;
-    margin-left: 650px;
-    margin-top: 340px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #beer1_container {
-    top: auto;
-    left: 40%;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+}
+
+#beer2_container {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+}
+
+#beer3_container {
+    position: absolute;
+    top: 50%;
+    left: 60%;
 }
 
 #beer1_container img {
-    width: 8%;
+    width: 15%;
 }
 
 #beer2_container img {
-    width: 8%;
+    width: 15%;
 }
 
 #beer3_container img {
-    width: 8%;
+    width: 15%;
+}
+
+
+
+
+
+
+
+#laptop_container {
+    position: absolute;
+    width: 50%;
+    height: 50%;
 }
 
 #laptop_container img {
-    width: 10%;
-    height: 10%;
+    width: 50%;
+    height: 50%;
 }
 
-#score {
-    width: 100px;
-    position: absolute;
-    top: 0px;
-    left: 10px;
-}
+
+
+
+
+
+
+
 
 #heart1_container {
+    position: absolute;
     top: 0.1%;
     right: -44%;
     z-index: 2;
-    position: absolute;
 }
 
 #heart2_container {
+    position: absolute;
     top: 0.1%;
     right: -39%;
     z-index: 2;
-    position: absolute;
 }
 
 #heart3_container {
+    position: absolute;
     top: 0.1%;
     right: -34%;
     z-index: 2;
-    position: absolute;
 }
 
 #heart1_container img {
@@ -110,33 +214,38 @@ body {
     width: 15%;
 }
 
-.heart {
-    max-width: 80px;
-}
-
 #timer_container {
     position: absolute;
-    top: 0px;
-    left: 50%;
+    top: 1%;
+    left: 45%;
 }
 
 #timer_container img {
-    width: 20%;
+    width: 40%;
 }
 
-#scoreboard {
+#scoreboard_container {
+    position: absolute;
     top: 5%;
     left: 5%;
-    position: absolute;
+    width: 1%;
     z-index: 2%;
 }
 
-#start
+#scoreboard img {
+    top: 5%;
+    left: 5%;
+    width: 20%;
+    z-index: 2%;
+}
+
+
+#start{}
 
 
 
-#game_over
+#game_over{}
 
 
 
-#level_complete
+#level_complete {}

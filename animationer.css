@@ -1,6 +1,6 @@
 .falling {
     animation-name: falling;
-    animation-duration: 20s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -12,6 +12,23 @@
 
     100% {
         transform: translate(0,300%);
+    }
+    
+}
+.moveright {
+    animation-name: moveright;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes moveright {
+    0% {
+        transform: translate(0, -100%);
+    }
+
+    100% {
+        transform: translate(0,-100%);
     }
     
 }
