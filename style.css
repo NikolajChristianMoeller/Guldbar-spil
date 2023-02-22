@@ -17,27 +17,27 @@ body {
 }
 
 #cola1_container img {
-    width: 10%;
+    width: 8%;
 }
 
 #cola2_container img {
-    width: 10%;
+    width: 8%;
 }
 
 #cola3_container img {
-    width: 10%;
+    width: 8%;
 }
 
 #fanta1_container img {
-    width: 10%;
+    width: 8%;
 }
 
 #fanta2_container img {
-    width: 10%;
+    width: 8%;
 }
 
 #fanta3_container img {
-    width: 10%;
+    width: 8%;
 }
 
 #beer {
@@ -54,15 +54,15 @@ body {
 }
 
 #beer1_container img {
-    width: 10%;
+    width: 8%;
 }
 
 #beer2_container img {
-    width: 10%;
+    width: 8%;
 }
 
 #beer3_container img {
-    width: 10%;
+    width: 8%;
 }
 
 #laptop_container img {
@@ -78,22 +78,22 @@ body {
 }
 
 #heart1_container {
-    top: 5%;
-    right: -40%;
+    top: 0.1%;
+    right: -44%;
     z-index: 2;
     position: absolute;
 }
 
 #heart2_container {
-    top: 5%;
-    right: -35%;
+    top: 0.1%;
+    right: -39%;
     z-index: 2;
     position: absolute;
 }
 
 #heart3_container {
-    top: 5%;
-    right: -30%;
+    top: 0.1%;
+    right: -34%;
     z-index: 2;
     position: absolute;
 }
