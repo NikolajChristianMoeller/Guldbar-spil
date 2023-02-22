@@ -28,7 +28,7 @@
     }
 
     100% {
-        transform: translate(600%,-200%);
+        transform: translate(600%, -200%);
     }
 }
 
@@ -52,7 +52,7 @@
     animation-name: zoom_out;
     animation-duration: 1s;
     animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
 }
 
 @keyframes zoom_out {
