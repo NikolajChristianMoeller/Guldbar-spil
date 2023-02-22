@@ -40,21 +40,6 @@ body {
     width: 10%;
 }
 
-
-#laptop {
-    
-}
-
-
-/* #game_elements_beer {
-    z-index: 1;
-    border-width: 2px;
-    border-color:black;
-    border-style: solid;
-    position: absolute;
-    left: 70%;
-} */
-
 #beer {
     width: 70px;
     height: 80px;
@@ -80,14 +65,10 @@ body {
     width: 10%;
 }
 
-
-
 #laptop_container img {
     width: 10%;
     height: 10%;
 }
-
-
 
 #score {
     width: 100px;
