@@ -22,7 +22,7 @@ function start() {
   document.querySelector("#beer3_container").addEventListener("click", clickBeer3);
 }
 
-/**************************************** CLICK FUNCTIONER ****************************************/
+/**************************************** CLICK FUNCTIONER *****************************/
 /**************************************** FANTA ****************************************/
 
 function clickFanta1() {
@@ -365,6 +365,8 @@ function beer3Gone() {
   document.querySelector("#beer3_container").addEventListener("click", clickBeer3);
 }
 
+/**************************************** DECREMENT ***********************************/
+
 function decrementLives() {
   console.log("decrementLives");
   console.log(lives);
@@ -382,8 +384,21 @@ function displayDecrementedLives() {
   console.log(`#heart${lives}`);
   document.querySelector("#heart_container" + lives).classList.remove("active_heart");
   document.querySelector("#heart_container" + lives).classList.add("broken_heart");
+
 }
 
+function decrementPoints() {
+  points--;
+  console.log(points);
+  displayPoints();
+}
+
+/**************************************** INCREMENT POINTS *****************************/
+
+function showIncrementedLives() {
+  document.querySelector("#heart" + lives).classList.remove("broken_heart");
+  document.querySelector("#heart" + lives).classList.add("active_heart");
+}
 
 function incrementPoints() {
   console.log("Giv point");
@@ -393,37 +408,16 @@ function incrementPoints() {
 
   if (points >= 15) {
     levelComplete();
-
   }
 }
 
-
-
-function decrementPoints() {
-  points--;
-  console.log(points);
-  displayPoints();
-}
 
 function displayPoints() {
   console.log("displayPoints");
   document.querySelector("#coin_count").textContent = points;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/************************************ GAME OVER *********************************/
+/**************************************** GAME OVER ************************************/
 
 
 function gameOver() {
@@ -431,13 +425,121 @@ function gameOver() {
   document.querySelector("#game_over").classList.remove("hidden");
 }
 
-/************************************ LEVEL COMPLETE ***************************/
-
+/**************************************** LEVEL COMPLETE *******************************/
 
 function levelComplete() {
   console.log("Level Complete");
   document.querySelector("#level_complete").classList.remove("hidden");
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -598,4 +700,3 @@ function levelComplete() {
 //   document
 //     .querySelector("#bomb_container")
 //     .addEventListener("click", clickBomb);
-
