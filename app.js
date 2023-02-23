@@ -35,10 +35,12 @@ function clickFanta1() {
 
   // sæt forsvind-animation på coin
   document.querySelector("#fanta1_sprite").classList.add("zoom_out");
-
+  console.log("zoom")
   // når forsvind-animation er færdig: coinGone
   document.querySelector("#fanta1_container").addEventListener("animationend", fanta1Gone);
   incrementPoints();
+  console.log("increment points")
+  decrementLives();
  
 }
 
@@ -365,25 +367,27 @@ function beer3Gone() {
   document.querySelector("#beer3_container").addEventListener("click", clickBeer3);
 }
 
+function decrementLives() {
+  console.log("decrementLives");
+  displayDecrementedLives();
+  lives--;
+  console.log(lives);
+}
 
-
-
-
-
-
-
-
+function displayDecrementedLives() {
+  console.log(`#heart${lives}`);
+  document
+    .querySelector(`#heart${lives}_container`)
+    .classList.remove("active_heart");
+  document
+    .querySelector(`#heart${lives}_container`)
+    .classList.add("broken_heart");
+}
 
 function incrementLives() {
   lives++;
   console.log(lives);
   displayIncrementedLives();
-}
-
-function displayIncrementedLives() {
-  console.log(`#heart${lives}`);
-  document.querySelector(`#heart${lives}`).classList.remove("broken_heart");
-  document.querySelector(`#heart${lives}`).classList.add("active_heart");
 }
 
 function incrementPoints() {
@@ -436,19 +440,6 @@ function clickBomb() {
   // når forsvind-animation er færdig: coinGone
   document.querySelector("#bomb_container").addEventListener("animationend", bombGone);
   decrementLives();
-}
-
-function decrementLives() {
-  console.log("decrementLives");
-  lives--;
-  console.log(lives);
-  displayDecrementedLives();
-}
-
-function displayDecrementedLives() {
-  console.log(`#heart${lives}`);
-  document.querySelector(`#heart${lives + 1}`).classList.remove("active_heart");
-  document.querySelector(`#heart${lives + 1}`).classList.add("broken_heart");
 }
 
 function bombGone() {
