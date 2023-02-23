@@ -158,36 +158,36 @@ body {
   height: 50%;
 }
 
-#heart1_container {
+#heart_container1 {
   position: absolute;
   top: 0.1%;
   right: -44%;
   z-index: 2;
 }
 
-#heart2_container {
+#heart_container2 {
   position: absolute;
   top: 0.1%;
   right: -39%;
   z-index: 2;
 }
 
-#heart3_container {
+#heart_container3 {
   position: absolute;
   top: 0.1%;
   right: -34%;
   z-index: 2;
 }
 
-#heart1_container img {
+#heart_container1 img {
   width: 15%;
 }
 
-#heart2_container img {
+#heart_container2 img {
   width: 15%;
 }
 
-#heart3_container img {
+#heart_container3 img {
   width: 15%;
 }
 
@@ -216,11 +216,41 @@ body {
   z-index: 2%;
 }
 
-#start {
+.active_heart {
+  filter: drop-shadow(0 0 2px yellow);
 }
 
+.broken_heart {
+  filter: grayscale(75%) blur(.5px);
+}
+
+.paused {
+  animation-play-state: paused;
+}
+
+.hidden,
+#game_over.hidden,
+#level_complete.hidden {
+  display: none;
+}
+
+
 #game_over {
+  grid-area: 1 /1;
+  z-index: 999;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-image: linear-gradient(150deg, #c90303 0%, #790909 100%);
+  color: #ffffff;
 }
 
 #level_complete {
+  grid-area: 1 /1;
+  z-index: 999;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-image: linear-gradient(150deg, #20c903 0%, #09793b 100%);
+  color: #ffffff;
 }
