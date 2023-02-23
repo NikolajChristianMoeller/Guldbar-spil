@@ -22,8 +22,8 @@ function start() {
   document.querySelector("#beer3_container").addEventListener("click", clickBeer3);
 }
 
-/************************************ CLICK FUNCTIONER **********************************/
-/************************************ FANTA *********************************************/
+/**************************************** CLICK FUNCTIONER ****************************************/
+/**************************************** FANTA ****************************************/
 
 function clickFanta1() {
   console.log("Click Fanta1");
@@ -72,7 +72,7 @@ function clickFanta3() {
 decrementLives();
 }
 
-/************************************ COLA ********************************************/
+/**************************************** COLA ****************************************/
 
 function clickCola1() {
   console.log("Click Cola1");
@@ -124,7 +124,7 @@ function clickCola3() {
   decrementLives();
 }
 
-/***************************************** BEER *******************************************/
+/**************************************** BEER ****************************************/
 
 function clickBeer1() {
   console.log("Click Beer1");
@@ -139,6 +139,7 @@ function clickBeer1() {
 
   // når forsvind-animation er færdig: coinGone
   document.querySelector("#beer1_container").addEventListener("animationend", beer1Gone);
+  incrementPoints();
 }
 
 function clickBeer2() {
@@ -154,6 +155,7 @@ function clickBeer2() {
 
   // når forsvind-animation er færdig: coinGone
   document.querySelector("#beer2_container").addEventListener("animationend", beer2Gone);
+  incrementPoints();
 }
 
 function clickBeer3() {
@@ -169,9 +171,28 @@ function clickBeer3() {
 
   // når forsvind-animation er færdig: coinGone
   document.querySelector("#beer3_container").addEventListener("animationend", beer3Gone);
+  incrementPoints();
 }
 
-/********************************************* GONE ******************************************/
+/**************************************** LAPTOP **************************************/
+
+function clickLaptop() {
+  console.log("Click Laptop");
+  // Forhindr gentagne clicks
+  document.querySelector("#laptop_container").removeEventListener("click", clickLaptop);
+
+  // Stop coin container
+  document.querySelector("#laptop_container").classList.add("paused");
+
+  // sæt forsvind-animation på coin
+  document.querySelector("#laptop_sprite").classList.add("zoom_out");
+
+  // når forsvind-animation er færdig: coinGone
+  document.querySelector("#laptop_container").addEventListener("animationend", laptopGone);
+  incrementPoints();
+}
+
+/**************************************** GONE ****************************************/
 
 function fanta1Gone() {
   console.log("fanta1Gone");
@@ -363,17 +384,20 @@ function displayDecrementedLives() {
   document.querySelector("#heart_container" + lives).classList.add("broken_heart");
 }
 
-// function incrementLives() {
-//   lives++;
-//   console.log(lives);
-//   displayIncrementedLives();
-// }
 
-// function incrementPoints() {
-//   points++;
-//   console.log(points);
-//   displayPoints();
-// }
+function incrementPoints() {
+  console.log("Giv point");
+  points++;
+  console.log("har nu " + points + " point");
+  displayPoints();
+
+  if (points >= 15) {
+    levelComplete();
+
+  }
+}
+
+
 
 function decrementPoints() {
   points--;
@@ -385,6 +409,18 @@ function displayPoints() {
   console.log("displayPoints");
   document.querySelector("#coin_count").textContent = points;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /************************************ GAME OVER *********************************/
