@@ -11,37 +11,19 @@ function start() {
   // Start animationer
   document.querySelector("#fanta1_container").classList.add("falling");
   // Registrer click
-  document
-    .querySelector("#cola1_container")
-    .addEventListener("click", clickCola1);
-  document
-    .querySelector("#cola2_container")
-    .addEventListener("click", clickCola2);
-  document
-    .querySelector("#cola3_container")
-    .addEventListener("click", clickCola3);
-  document
-    .querySelector("#fanta1_container")
-    .addEventListener("click", clickFanta1);
-  document
-    .querySelector("#fanta2_container")
-    .addEventListener("click", clickFanta2);
-  document
-    .querySelector("#fanta3_container")
-    .addEventListener("click", clickFanta3);
-  document
-    .querySelector("#beer1_container")
-    .addEventListener("click", clickBeer1);
-  document
-    .querySelector("#beer2_container")
-    .addEventListener("click", clickBeer2);
-  document
-    .querySelector("#beer3_container")
-    .addEventListener("click", clickBeer3);
+  document.querySelector("#cola1_container").addEventListener("click", clickCola1);
+  document.querySelector("#cola2_container").addEventListener("click", clickCola2);
+  document.querySelector("#cola3_container").addEventListener("click", clickCola3);
+  document.querySelector("#fanta1_container").addEventListener("click", clickFanta1);
+  document.querySelector("#fanta2_container").addEventListener("click", clickFanta2);
+  document.querySelector("#fanta3_container").addEventListener("click", clickFanta3);
+  document.querySelector("#beer1_container").addEventListener("click", clickBeer1);
+  document.querySelector("#beer2_container").addEventListener("click", clickBeer2);
+  document.querySelector("#beer3_container").addEventListener("click", clickBeer3);
 }
 
-/**************************** CLICK FUNCTIONER ***************************************** */
-/************************************ FANTA ******************************************** */
+/************************************ CLICK FUNCTIONER **********************************/
+/************************************ FANTA *********************************************/
 
 function clickFanta1() {
   console.log("Click Fanta1");
@@ -94,7 +76,7 @@ function clickFanta3() {
   incrementPoints();
 }
 
-/************************************ COLA ******************************** */
+/************************************ COLA ********************************************/
 
 function clickCola1() {
   console.log("Click Cola1");
@@ -156,7 +138,7 @@ function clickCola3() {
   incrementLives();
 }
 
-/********************************* BEER *********************************************** */
+/***************************************** BEER *******************************************/
 
 function clickBeer1() {
   console.log("Click Beer1");
@@ -218,7 +200,7 @@ function clickBeer3() {
   incrementLives();
 }
 
-/********************************************* GONE ***************************************** */
+/********************************************* GONE ******************************************/
 
 function fanta1Gone() {
   console.log("fanta1Gone");
@@ -324,9 +306,7 @@ function displayPoints() {
 
 function coinGone() {
   // fjern event der bringer os herind
-  document
-    .querySelector("#coin1_container")
-    .removeEventListener("animationend", coinGone);
+  document.querySelector("#coin1_container").removeEventListener("animationend", coinGone);
 
   // fjern forsvind-animation
   document.querySelector("#coin1_sprite").classList.remove("zoom_out");
@@ -340,17 +320,13 @@ function coinGone() {
   document.querySelector("#coin1_container").classList.add("falling");
 
   // gør det muligt at klikke på coin igen
-  document
-    .querySelector("#coin1_container")
-    .addEventListener("click", clickCoin);
+  document.querySelector("#coin1_container").addEventListener("click", clickCoin);
 }
 
 function clickBomb() {
   console.log("Click bomb");
   // Forhindr gentagne clicks
-  document
-    .querySelector("#bomb_container")
-    .removeEventListener("click", clickBomb);
+  document.querySelector("#bomb_container").removeEventListener("click", clickBomb);
 
   // Stop coin container
   document.querySelector("#bomb_container").classList.add("paused");
@@ -359,10 +335,7 @@ function clickBomb() {
   document.querySelector("#bomb_sprite").classList.add("zoom_in");
 
   // når forsvind-animation er færdig: coinGone
-  document
-    .querySelector("#bomb_container")
-    .addEventListener("animationend", bombGone);
-
+  document.querySelector("#bomb_container").addEventListener("animationend", bombGone);
   decrementLives();
 }
 
@@ -400,4 +373,20 @@ function bombGone() {
   document
     .querySelector("#bomb_container")
     .addEventListener("click", clickBomb);
+}
+
+
+
+/************************************ GAME OVER *********************************/
+
+
+function gameOver() {
+  console.log("Game Over");
+}
+
+/************************************ LEVEL COMPLETE ***************************/
+
+
+function levelComplete() {
+  console.log("Level Complete");
 }
