@@ -411,14 +411,12 @@ function incrementPoints() {
   }
 }
 
-
 function displayPoints() {
   console.log("displayPoints");
   document.querySelector("#coin_count").textContent = points;
 }
 
 /**************************************** GAME OVER ************************************/
-
 
 function gameOver() {
   console.log("Game Over");
@@ -431,13 +429,6 @@ function levelComplete() {
   console.log("Level Complete");
   document.querySelector("#level_complete").classList.remove("hidden");
 }
-
-
-
-
-
-
-
 
 
 

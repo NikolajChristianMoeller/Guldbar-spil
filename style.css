@@ -9,18 +9,23 @@ body {
 #screen {
   aspect-ratio: 16/9;
   display: grid;
+  position: relative;
   grid-template: 100% / 100%;
+  width: 100%;
 }
 
 #game {
   grid-area: 1/1;
+  width: 100%;
   display: grid;
   grid-template: 100% / 100%;
 }
 
 #game_background {
+  aspect-ratio: 16/9;
   display: grid;
   grid-area: 1/1;
+  position: relative;
   background-image: url(images/bar.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,15 +36,20 @@ body {
 }
 
 #game_elements {
-  position: relative;
   grid-area: 1 /1;
 }
+
+/************************************************* COLA **********************************************/
 
 #cola1_container {
   position: absolute;
   left: 40%;
   top: 70%;
   width: 10%;
+}
+
+#cola1_container img {
+  width: 100%;
 }
 
 #cola2_container {
@@ -49,6 +59,10 @@ body {
   width: 10%;
 }
 
+#cola2_container img {
+  width: 100%;
+}
+
 #cola3_container {
   position: absolute;
   left: 60%;
@@ -56,23 +70,21 @@ body {
   width: 10%;
 }
 
-#cola1_container img {
-  width: 100%;
-}
-
-#cola2_container img {
-  width: 100%;
-}
-
 #cola3_container img {
   width: 100%;
 }
+
+/************************************************* FANTA **********************************************/
 
 #fanta1_container {
   position: absolute;
   left: 25%;
   top: 75%;
   width: 50%;
+}
+
+#fanta1_container img {
+  width: 8%;
 }
 
 #fanta2_container {
@@ -82,6 +94,10 @@ body {
   width: 50%;
 }
 
+#fanta2_container img {
+  width: 8%;
+}
+
 #fanta3_container {
   position: absolute;
   left: 25%;
@@ -89,38 +105,20 @@ body {
   width: 50%;
 }
 
-
-
-
-
-
-#fanta1_container {
-    width: 8%;
-    position: absolute;
-}
-
-#fanta1_sprite {
-    width: 100%;
-}
-
-
-
-
-
-
-
-#fanta2_container img {
-  width: 8%;
-}
-
 #fanta3_container img {
   width: 8%;
 }
+
+/************************************************* BEER **********************************************/
 
 #beer1_container {
   position: absolute;
   top: 10%;
   left: 60%;
+}
+
+#beer1_container img {
+  width: 15%;
 }
 
 #beer2_container {
@@ -129,23 +127,21 @@ body {
   left: 60%;
 }
 
+#beer2_container img {
+  width: 15%;
+}
+
 #beer3_container {
   position: absolute;
   top: 50%;
   left: 60%;
 }
 
-#beer1_container img {
-  width: 15%;
-}
-
-#beer2_container img {
-  width: 15%;
-}
-
 #beer3_container img {
   width: 15%;
 }
+
+/************************************************* LAPTOP **********************************************/
 
 #laptop_container {
   position: absolute;
@@ -158,11 +154,17 @@ body {
   height: 50%;
 }
 
+/************************************************* HEART **********************************************/
+
 #heart_container1 {
   position: absolute;
   top: 0.1%;
   right: -44%;
   z-index: 2;
+}
+
+#heart_container1 img {
+  width: 15%;
 }
 
 #heart_container2 {
@@ -172,6 +174,10 @@ body {
   z-index: 2;
 }
 
+#heart_container2 img {
+  width: 15%;
+}
+
 #heart_container3 {
   position: absolute;
   top: 0.1%;
@@ -179,17 +185,11 @@ body {
   z-index: 2;
 }
 
-#heart_container1 img {
-  width: 15%;
-}
-
-#heart_container2 img {
-  width: 15%;
-}
-
 #heart_container3 img {
   width: 15%;
 }
+
+/************************************************* TIMER **********************************************/
 
 #timer_container {
   position: absolute;
@@ -200,6 +200,8 @@ body {
 #timer_container img {
   width: 40%;
 }
+
+/************************************************* SCOREBOARD *****************************************/
 
 #scoreboard_container {
   position: absolute;
@@ -216,12 +218,37 @@ body {
   z-index: 2%;
 }
 
+/************************************************* GAME OVER **********************************************/
+
+#game_over {
+  grid-area: 1 /1;
+  aspect-ratio: 16/9;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-image: linear-gradient(150deg, #c90303 0%, #790909 100%);
+  color: #ffffff;
+  z-index: 20;
+}
+
+/************************************************* LEVEL COMPLETE *****************************************/
+
+#level_complete {
+  grid-area: 1 /1;
+  z-index: 999;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-image: linear-gradient(150deg, #20c903 0%, #09793b 100%);
+  color: #ffffff;
+}
+
 .active_heart {
   filter: drop-shadow(0 0 2px yellow);
 }
 
 .broken_heart {
-  filter: grayscale(75%) blur(.5px);
+  filter: grayscale(75%) blur(0.5px);
 }
 
 .paused {
@@ -234,23 +261,22 @@ body {
   display: none;
 }
 
+.position1 {
 
-#game_over {
-  grid-area: 1 /1;
-  z-index: 999;
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  background-image: linear-gradient(150deg, #c90303 0%, #790909 100%);
-  color: #ffffff;
 }
 
-#level_complete {
-  grid-area: 1 /1;
-  z-index: 999;
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  background-image: linear-gradient(150deg, #20c903 0%, #09793b 100%);
-  color: #ffffff;
+.position2 {
+
+}
+
+.position3 {
+
+}
+
+.position4 {
+
+}
+
+.position5 {
+
 }
