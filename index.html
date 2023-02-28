@@ -10,9 +10,12 @@
     <title>mit-spil</title>
 </head>
 <body>
-    <div = id="screen">
-        <div = id="game">
+    <div id="screen">
+        <div id="game">
+            <div id="game_background">
+
             </div>
+        </div>
             <div id="game_elements">
                 <div id="cola1_container" class="moveright">
                     <img id="cola1_sprite" src="images/cola.png">
@@ -47,8 +50,9 @@
             </div>
             <div = id="game_foreground"></div>
             <div id="game_ui">
-                <div id="scoreboard_container" class="pulse">
-                    <!--<img id="scoreboard" src="images/score.png" style="height: 100px; width: 100px;">-->
+                <div id="scoreboard_container">
+                    <span id="score_count">0</span>
+                    
                 </div>
                 <div id="timer_container">
                     <img id="timer_sprite" src="images/timer.png" class="glow">
@@ -64,10 +68,12 @@
                 </div>
             </div>
             <div id="start" class="hidden"></div>
-                <div id="game_over"class="hidde"></div>
-                    <h2>GAME OVER</h2>
-                <div id="level_complete" class="hidden"></div>
-                    <h2>LEVEL COMPLETE</h2>
+                <div id="game_over"class="hidden">
+                    <h2 id="game_over_text">GAME OVER</h2>
+                </div>
+                <div id="level_complete" class="hidden">
+                    <h2 id="level_complete_text">LEVEL COMPLETE</h2>
+                </div>
         </div>
     </div>
 </body>

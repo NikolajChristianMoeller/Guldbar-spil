@@ -11,30 +11,14 @@ function start() {
   // Start animationer
   document.querySelector("#fanta1_container").classList.add("falling");
   // Registrer click
-  document
-    .querySelector("#cola1_container")
-    .addEventListener("click", clickCola1);
-  document
-    .querySelector("#cola2_container")
-    .addEventListener("click", clickCola2);
-  document
-    .querySelector("#cola3_container")
-    .addEventListener("click", clickCola3);
-  document
-    .querySelector("#fanta1_container")
-    .addEventListener("click", clickFanta1);
-  document
-    .querySelector("#fanta2_container")
-    .addEventListener("click", clickFanta2);
-  document
-    .querySelector("#fanta3_container")
-    .addEventListener("click", clickFanta3);
-  document
-    .querySelector("#beer1_container")
-    .addEventListener("click", clickBeer1);
-  document
-    .querySelector("#beer2_container")
-    .addEventListener("click", clickBeer2);
+  document.querySelector("#cola1_container").addEventListener("click", clickCola1);
+  document.querySelector("#cola2_container").addEventListener("click", clickCola2);
+  document.querySelector("#cola3_container").addEventListener("click", clickCola3);
+  document.querySelector("#fanta1_container").addEventListener("click", clickFanta1);
+  document.querySelector("#fanta2_container").addEventListener("click", clickFanta2);
+  document.querySelector("#fanta3_container").addEventListener("click", clickFanta3);
+  document.querySelector("#beer1_container").addEventListener("click", clickBeer1);
+  document.querySelector("#beer2_container").addEventListener("click", clickBeer2);
   document.querySelector("#beer3_container").addEventListener("click", clickBeer3);
   document.querySelector("#laptop_container").addEventListener("click", clickLaptop);
 }
@@ -45,9 +29,7 @@ function start() {
 function clickFanta1() {
   console.log("Click Fanta1");
   // Forhindr gentagne clicks
-  document
-    .querySelector("#fanta1_container")
-    .removeEventListener("click", clickFanta1);
+  document.querySelector("#fanta1_container").removeEventListener("click", clickFanta1);
 
   // Stop coin container
   document.querySelector("#fanta1_container").classList.add("paused");
@@ -55,18 +37,14 @@ function clickFanta1() {
   // sæt forsvind-animation på coin
   document.querySelector("#fanta1_sprite").classList.add("zoom_out");
   // når forsvind-animation er færdig: coinGone
-  document
-    .querySelector("#fanta1_container")
-    .addEventListener("animationend", fanta1Gone);
+  document.querySelector("#fanta1_container").addEventListener("animationend", fanta1Gone);
   decrementLives();
 }
 
 function clickFanta2() {
   console.log("Click Fanta2");
   // Forhindr gentagne clicks
-  document
-    .querySelector("#fanta2_container")
-    .removeEventListener("click", clickFanta2);
+  document.querySelector("#fanta2_container").removeEventListener("click", clickFanta2);
 
   // Stop coin container
   document.querySelector("#fanta2_container").classList.add("paused");
@@ -75,18 +53,14 @@ function clickFanta2() {
   document.querySelector("#fanta2_container").classList.add("zoom_out");
 
   // når forsvind-animation er færdig: coinGone
-  document
-    .querySelector("#fanta2_container")
-    .addEventListener("animationend", fanta2Gone);
+  document.querySelector("#fanta2_container").addEventListener("animationend", fanta2Gone);
   decrementLives();
 }
 
 function clickFanta3() {
   console.log("Click Fanta3");
   // Forhindr gentagne clicks
-  document
-    .querySelector("#fanta3_container")
-    .removeEventListener("click", clickFanta3);
+  document.querySelector("#fanta3_container").removeEventListener("click", clickFanta3);
 
   // Stop coin container
   document.querySelector("#fanta3_container").classList.add("paused");
@@ -95,9 +69,7 @@ function clickFanta3() {
   document.querySelector("#fanta3_container").classList.add("zoom_out");
 
   // når forsvind-animation er færdig: coinGone
-  document
-    .querySelector("#fanta3_container")
-    .addEventListener("animationend", fanta3Gone);
+  document.querySelector("#fanta3_container").addEventListener("animationend", fanta3Gone);
   decrementLives();
 }
 
@@ -106,9 +78,7 @@ function clickFanta3() {
 function clickCola1() {
   console.log("Click Cola1");
   // Forhindr gentagne clicks
-  document
-    .querySelector("#cola1_container")
-    .removeEventListener("click", clickCola1);
+  document.querySelector("#cola1_container").removeEventListener("click", clickCola1);
 
   // Stop coin container
   document.querySelector("#cola1_container").classList.add("paused");
@@ -117,18 +87,14 @@ function clickCola1() {
   document.querySelector("#cola1_sprite").classList.add("zoom_out");
 
   // når forsvind-animation er færdig: coinGone
-  document
-    .querySelector("#cola1_container")
-    .addEventListener("animationend", cola1Gone);
+  document.querySelector("#cola1_container").addEventListener("animationend", cola1Gone);
   decrementLives();
 }
 
 function clickCola2() {
   console.log("Click Cola2");
   // Forhindr gentagne clicks
-  document
-    .querySelector("#cola2_container")
-    .removeEventListener("click", clickCola2);
+  document.querySelector("#cola2_container").removeEventListener("click", clickCola2);
 
   // Stop coin container
   document.querySelector("#cola2_container").classList.add("paused");
@@ -137,18 +103,14 @@ function clickCola2() {
   document.querySelector("#cola2_sprite").classList.add("zoom_out");
 
   // når forsvind-animation er færdig: coinGone
-  document
-    .querySelector("#cola2_container")
-    .addEventListener("animationend", cola2Gone);
+  document.querySelector("#cola2_container").addEventListener("animationend", cola2Gone);
   decrementLives();
 }
 
 function clickCola3() {
   console.log("Click Cola3");
   // Forhindr gentagne clicks
-  document
-    .querySelector("#cola3_container")
-    .removeEventListener("click", clickCola3);
+  document.querySelector("#cola3_container").removeEventListener("click", clickCola3);
 
   // Stop coin container
   document.querySelector("#cola3_container").classList.add("paused");
@@ -157,9 +119,7 @@ function clickCola3() {
   document.querySelector("#cola3_sprite").classList.add("zoom_out");
 
   // når forsvind-animation er færdig: coinGone
-  document
-    .querySelector("#cola3_container")
-    .addEventListener("animationend", cola3Gone);
+  document.querySelector("#cola3_container").addEventListener("animationend", cola3Gone);
   decrementLives();
 }
 
@@ -168,9 +128,7 @@ function clickCola3() {
 function clickBeer1() {
   console.log("Click Beer1");
   // Forhindr gentagne clicks
-  document
-    .querySelector("#beer1_container")
-    .removeEventListener("click", clickBeer1);
+  document.querySelector("#beer1_container").removeEventListener("click", clickBeer1);
 
   // Stop coin container
   document.querySelector("#beer1_container").classList.add("paused");
@@ -179,18 +137,14 @@ function clickBeer1() {
   document.querySelector("#beer1_sprite").classList.add("zoom_out");
 
   // når forsvind-animation er færdig: coinGone
-  document
-    .querySelector("#beer1_container")
-    .addEventListener("animationend", beer1Gone);
+  document.querySelector("#beer1_container").addEventListener("animationend", beer1Gone);
   incrementPoints();
 }
 
 function clickBeer2() {
   console.log("Click Beer2");
   // Forhindr gentagne clicks
-  document
-    .querySelector("#beer2_container")
-    .removeEventListener("click", clickBeer2);
+  document.querySelector("#beer2_container").removeEventListener("click", clickBeer2);
 
   // Stop coin container
   document.querySelector("#beer2_container").classList.add("paused");
@@ -199,18 +153,14 @@ function clickBeer2() {
   document.querySelector("#beer2_sprite").classList.add("zoom_out");
 
   // når forsvind-animation er færdig: coinGone
-  document
-    .querySelector("#beer2_container")
-    .addEventListener("animationend", beer2Gone);
+  document.querySelector("#beer2_container").addEventListener("animationend", beer2Gone);
   incrementPoints();
 }
 
 function clickBeer3() {
   console.log("Click Beer3");
   // Forhindr gentagne clicks
-  document
-    .querySelector("#beer3_container")
-    .removeEventListener("click", clickBeer3);
+  document.querySelector("#beer3_container").removeEventListener("click", clickBeer3);
 
   // Stop coin container
   document.querySelector("#beer3_container").classList.add("paused");
@@ -219,9 +169,7 @@ function clickBeer3() {
   document.querySelector("#beer3_sprite").classList.add("zoom_out");
 
   // når forsvind-animation er færdig: coinGone
-  document
-    .querySelector("#beer3_container")
-    .addEventListener("animationend", beer3Gone);
+  document.querySelector("#beer3_container").addEventListener("animationend", beer3Gone);
   incrementPoints();
 }
 
@@ -230,9 +178,7 @@ function clickBeer3() {
 function clickLaptop() {
   console.log("Click Laptop");
   // Forhindr gentagne clicks
-  document
-    .querySelector("#laptop_container")
-    .removeEventListener("click", clickLaptop);
+  document.querySelector("#laptop_container").removeEventListener("click", clickLaptop);
 
   // Stop coin container
   document.querySelector("#laptop_container").classList.add("paused");
@@ -241,9 +187,7 @@ function clickLaptop() {
   document.querySelector("#laptop_sprite").classList.add("zoom_out");
 
   // når forsvind-animation er færdig: coinGone
-  document
-    .querySelector("#laptop_container")
-    .addEventListener("animationend", laptopGone);
+  document.querySelector("#laptop_container").addEventListener("animationend", laptopGone);
   incrementPoints();
 }
 
@@ -251,9 +195,7 @@ function clickLaptop() {
 
 function fanta1Gone() {
   console.log("fanta1Gone");
-  document
-    .querySelector("#fanta1_container")
-    .removeEventListener("animationend", fanta1Gone);
+  document.querySelector("#fanta1_container").removeEventListener("animationend", fanta1Gone);
 
   // fjern forsvind-animation
   document.querySelector("#fanta1_sprite").classList.remove("zoom_out");
@@ -267,16 +209,12 @@ function fanta1Gone() {
   document.querySelector("#fanta1_container").classList.add("falling");
 
   // gør det muligt at klikke på coin igen
-  document
-    .querySelector("#fanta1_container")
-    .addEventListener("click", clickFanta1);
+  document.querySelector("#fanta1_container").addEventListener("click", clickFanta1);
 }
 
 function fanta2Gone() {
   console.log("fanta2Gone");
-  document
-    .querySelector("#fanta2_container")
-    .removeEventListener("animationend", fanta2Gone);
+  document.querySelector("#fanta2_container").removeEventListener("animationend", fanta2Gone);
 
   // fjern forsvind-animation
   document.querySelector("#fanta2_sprite").classList.remove("zoom_out");
@@ -290,16 +228,12 @@ function fanta2Gone() {
   document.querySelector("#fanta2_container").classList.add("falling");
 
   // gør det muligt at klikke på coin igen
-  document
-    .querySelector("#fanta2_container")
-    .addEventListener("click", clickFanta2);
+  document.querySelector("#fanta2_container").addEventListener("click", clickFanta2);
 }
 
 function fanta3Gone() {
   console.log("fanta3Gone");
-  document
-    .querySelector("#fanta3_container")
-    .removeEventListener("animationend", fanta3Gone);
+  document.querySelector("#fanta3_container").removeEventListener("animationend", fanta3Gone);
 
   // fjern forsvind-animation
   document.querySelector("#fanta3_sprite").classList.remove("zoom_out");
@@ -313,16 +247,12 @@ function fanta3Gone() {
   document.querySelector("#fanta3_container").classList.add("falling");
 
   // gør det muligt at klikke på coin igen
-  document
-    .querySelector("#fanta3_container")
-    .addEventListener("click", clickFanta3);
+  document.querySelector("#fanta3_container").addEventListener("click", clickFanta3);
 }
 
 function cola1Gone() {
   console.log("cola1Gone");
-  document
-    .querySelector("#cola1_container")
-    .removeEventListener("animationend", cola1Gone);
+  document.querySelector("#cola1_container").removeEventListener("animationend", cola1Gone);
 
   // fjern forsvind-animation
   document.querySelector("#cola1_sprite").classList.remove("zoom_out");
@@ -336,16 +266,12 @@ function cola1Gone() {
   document.querySelector("#cola1_container").classList.add("falling");
 
   // gør det muligt at klikke på coin igen
-  document
-    .querySelector("#cola1_container")
-    .addEventListener("click", clickCola1);
+  document.querySelector("#cola1_container").addEventListener("click", clickCola1);
 }
 
 function cola2Gone() {
   console.log("cola2Gone");
-  document
-    .querySelector("#cola2_container")
-    .removeEventListener("animationend", cola2Gone);
+  document.querySelector("#cola2_container").removeEventListener("animationend", cola2Gone);
 
   // fjern forsvind-animation
   document.querySelector("#cola2_sprite").classList.remove("zoom_out");
@@ -359,16 +285,12 @@ function cola2Gone() {
   document.querySelector("#cola2_container").classList.add("falling");
 
   // gør det muligt at klikke på coin igen
-  document
-    .querySelector("#cola2_container")
-    .addEventListener("click", clickCola2);
+  document.querySelector("#cola2_container").addEventListener("click", clickCola2);
 }
 
 function cola3Gone() {
   console.log("cola3Gone");
-  document
-    .querySelector("#cola3_container")
-    .removeEventListener("animationend", cola3Gone);
+  document.querySelector("#cola3_container").removeEventListener("animationend", cola3Gone);
 
   // fjern forsvind-animation
   document.querySelector("#cola3_sprite").classList.remove("zoom_out");
@@ -382,16 +304,12 @@ function cola3Gone() {
   document.querySelector("#cola3_container").classList.add("falling");
 
   // gør det muligt at klikke på coin igen
-  document
-    .querySelector("#cola3_container")
-    .addEventListener("click", clickCola3);
+  document.querySelector("#cola3_container").addEventListener("click", clickCola3);
 }
 
 function beer1Gone() {
   console.log("beer1Gone");
-  document
-    .querySelector("#beer1_container")
-    .removeEventListener("animationend", beer1Gone);
+  document.querySelector("#beer1_container").removeEventListener("animationend", beer1Gone);
 
   // fjern forsvind-animation
   document.querySelector("#beer1_sprite").classList.remove("zoom_out");
@@ -405,16 +323,12 @@ function beer1Gone() {
   document.querySelector("#beer1_container").classList.add("falling");
 
   // gør det muligt at klikke på coin igen
-  document
-    .querySelector("#cola1_container")
-    .addEventListener("click", clickBeer1);
+  document.querySelector("#cola1_container").addEventListener("click", clickBeer1);
 }
 
 function beer2Gone() {
   console.log("beer2Gone");
-  document
-    .querySelector("#beer2_container")
-    .removeEventListener("animationend", beer2Gone);
+  document.querySelector("#beer2_container").removeEventListener("animationend", beer2Gone);
 
   // fjern forsvind-animation
   document.querySelector("#beer2_sprite").classList.remove("zoom_out");
@@ -428,16 +342,12 @@ function beer2Gone() {
   document.querySelector("#beer2_container").classList.add("falling");
 
   // gør det muligt at klikke på coin igen
-  document
-    .querySelector("#beer2_container")
-    .addEventListener("click", clickBeer2);
+  document.querySelector("#beer2_container").addEventListener("click", clickBeer2);
 }
 
 function beer3Gone() {
   console.log("beer3Gone");
-  document
-    .querySelector("#beer3_container")
-    .removeEventListener("animationend", beer3Gone);
+  document.querySelector("#beer3_container").removeEventListener("animationend", beer3Gone);
 
   // fjern forsvind-animation
   document.querySelector("#beer3_sprite").classList.remove("zoom_out");
@@ -451,9 +361,7 @@ function beer3Gone() {
   document.querySelector("#beer3_container").classList.add("falling");
 
   // gør det muligt at klikke på coin igen
-  document
-    .querySelector("#beer3_container")
-    .addEventListener("click", clickBeer3);
+  document.querySelector("#beer3_container").addEventListener("click", clickBeer3);
 }
 
 function laptopGone() {
@@ -520,7 +428,7 @@ function incrementPoints() {
 
 function displayPoints() {
   console.log("displayPoints");
-  document.querySelector("#coin_count").textContent = points;
+  document.querySelector("#score_count").textContent = points;
 }
 
 /**************************************** GAME OVER ************************************/
@@ -528,6 +436,7 @@ function displayPoints() {
 function gameOver() {
   console.log("Game Over");
   document.querySelector("#game_over").classList.remove("hidden");
+  gameElementsCleanUp();
 }
 
 /**************************************** LEVEL COMPLETE *******************************/
@@ -535,7 +444,138 @@ function gameOver() {
 function levelComplete() {
   console.log("Level Complete");
   document.querySelector("#level_complete").classList.remove("hidden");
+  gameElementsCleanUp()
 }
+
+function gameElementsCleanUp() {
+  const gameElements = document.querySelector("#game_elements")
+  gameElements.remove();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // function coinGone() {
 //   // fjern event der bringer os herind
