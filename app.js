@@ -21,10 +21,37 @@ function start() {
   document.querySelector("#beer2_container").addEventListener("click", clickBeer2);
   document.querySelector("#beer3_container").addEventListener("click", clickBeer3);
   document.querySelector("#laptop_container").addEventListener("click", clickLaptop);
+
+  //Positioner dem
+
+  //bliver kaldt når den når bunden
+  document.querySelector("#laptop_container").addEventListener('animationiteration', test)
+  //bliver kaldt når man klikker på den
+  document.querySelector("#laptop_container").addEventListener('animationend', test)
+
 }
 
 /**************************************** CLICK FUNCTIONER *****************************/
 /**************************************** FANTA ****************************************/
+
+function test() {
+  document.querySelector("#laptop_container").classList.remove("position1", "position2", "position3", "position4", "position5")
+  console.log('test')
+  let randomPosition = Math.floor(Math.random() * 5 + 1);
+  if (randomPosition === 1) {
+    document.querySelector("#laptop_container").classList.add("position1")
+  } else if {
+    document.querySelector("#laptop_container").classList.add("position2")
+  } else if {
+    document.querySelector("#laptop_container").classList.add("position3")
+  } else if {
+    document.querySelector("#laptop_container").classList.add("position4")
+  } else if {
+    document.querySelector("#laptop_container").classList.add("position5")
+  }
+    
+  }
+}
 
 function clickFanta1() {
   console.log("Click Fanta1");
@@ -418,6 +445,19 @@ function showIncrementedLives() {
 function incrementPoints() {
   console.log("Giv point");
   points++;
+  console.log("Du har nu " + points + " point");
+  displayPoints();
+
+  if (points >= 15) {
+    levelComplete();
+  }
+}
+
+function incrementPoints() {
+  console.log("Giv point");
+  //short version
+  //points += 5
+  points = points + 5
   console.log("Du har nu " + points + " point");
   displayPoints();
 
