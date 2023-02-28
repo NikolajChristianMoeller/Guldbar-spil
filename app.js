@@ -35,9 +35,8 @@ function start() {
   document
     .querySelector("#beer2_container")
     .addEventListener("click", clickBeer2);
-  document
-    .querySelector("#beer3_container")
-    .addEventListener("click", clickBeer3);
+  document.querySelector("#beer3_container").addEventListener("click", clickBeer3);
+  document.querySelector("#laptop_container").addEventListener("click", clickLaptop);
 }
 
 /**************************************** CLICK FUNCTIONER *****************************/
@@ -120,7 +119,7 @@ function clickCola1() {
   // når forsvind-animation er færdig: coinGone
   document
     .querySelector("#cola1_container")
-    .addEventListener("animationend", heartCola1);
+    .addEventListener("animationend", cola1Gone);
   decrementLives();
 }
 
@@ -457,28 +456,42 @@ function beer3Gone() {
     .addEventListener("click", clickBeer3);
 }
 
+function laptopGone() {
+  console.log("fanta1Gone");
+  document.querySelector("#laptop_container").removeEventListener("animationend", laptopGone);
+
+  // fjern forsvind-animation
+  document.querySelector("#laptop_sprite").classList.remove("zoom_out");
+
+  // fjern pause
+  document.querySelector("#laptop_container").classList.remove("paused");
+
+  // genstart falling animation
+  document.querySelector("#laptop_container").classList.remove("falling");
+  document.querySelector("#laptop_container").offsetWidth;
+  document.querySelector("#laptop_container").classList.add("falling");
+
+  // gør det muligt at klikke på coin igen
+  document.querySelector("#laptop_container").addEventListener("click", clickLaptop);
+}
+
 /**************************************** DECREMENT ***********************************/
 
 function decrementLives() {
   console.log("decrementLives");
   console.log(lives);
-
   if (lives <= 0) {
     gameOver();
   } else {
     displayDecrementedLives();
+    lives--;
   }
-  lives--;
 }
 
 function displayDecrementedLives() {
   console.log(`#heart${lives}`);
-  document
-    .querySelector("#heart_container" + lives)
-    .classList.remove("active_heart");
-  document
-    .querySelector("#heart_container" + lives)
-    .classList.add("broken_heart");
+  document.querySelector(`#heart${lives}_container`).classList.remove("active_heart");
+  document.querySelector(`#heart${lives}_container`).classList.add("broken_heart");
 }
 
 function decrementPoints() {
