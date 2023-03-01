@@ -1,6 +1,6 @@
 .falling {
     animation-name: falling;
-    animation-duration: 5s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }

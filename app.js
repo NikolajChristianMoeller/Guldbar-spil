@@ -1,15 +1,30 @@
 "use strict";
 
-window.addEventListener("load", start);
+window.addEventListener("load", ready);
 
 let points = 0;
 let lives = 3;
 
-function start() {
-  console.log("JavaScript kører!");
+
+function ready() {
+  console.log("JavaScript ready!");
+  document.querySelector("#button_start").addEventListener("click", startGame);
+
+}
+
+function startGame() {
+  console.log("start game"); 
+  // nulstil point og liv
+  points = 0;
+  lives = 3;
+
+  // skjul startskærm
+  document.querySelector("#start").classList.add("hidden");
+
+
 
   // Start animationer
-  document.querySelector("#fanta1_container").classList.add("falling");
+  startAllAnimations();
   // Registrer click
   document.querySelector("#cola1_container").addEventListener("click", clickCola1);
   document.querySelector("#cola2_container").addEventListener("click", clickCola2);
@@ -31,6 +46,19 @@ function start() {
 
 }
 
+function startAllAnimations() {
+  document.querySelector("#cola1_container").classList.add("moveright");
+  document.querySelector("#cola2_container").classList.add("moveright");
+  document.querySelector("#cola3_container").classList.add("moveright");
+  document.querySelector("#fanta1_container").classList.add("falling");
+  document.querySelector("#fanta2_container").classList.add("falling");
+  document.querySelector("#fanta3_container").classList.add("falling");
+  document.querySelector("#beer1_container").classList.add("falling");
+  document.querySelector("#beer2_container").classList.add("falling");
+  document.querySelector("#beer3_container").classList.add("falling");
+  document.querySelector("#laptop_container").classList.add("falling");
+}
+
 /**************************************** CLICK FUNCTIONER *****************************/
 /**************************************** FANTA ****************************************/
 
@@ -38,19 +66,8 @@ function test() {
   document.querySelector("#laptop_container").classList.remove("position1", "position2", "position3", "position4", "position5")
   console.log('test')
   let randomPosition = Math.floor(Math.random() * 5 + 1);
-  if (randomPosition === 1) {
-    document.querySelector("#laptop_container").classList.add("position1")
-  } else if {
-    document.querySelector("#laptop_container").classList.add("position2")
-  } else if {
-    document.querySelector("#laptop_container").classList.add("position3")
-  } else if {
-    document.querySelector("#laptop_container").classList.add("position4")
-  } else if {
-    document.querySelector("#laptop_container").classList.add("position5")
-  }
-    
-  }
+    document.querySelector("#laptop_container").classList.add("position" + randomPosition)
+
 }
 
 function clickFanta1() {
@@ -66,6 +83,9 @@ function clickFanta1() {
   // når forsvind-animation er færdig: coinGone
   document.querySelector("#fanta1_container").addEventListener("animationend", fanta1Gone);
   decrementLives();
+  //få fanta til at sige en lyd
+  document.querySelector("#sound_fantafart").play();
+
 }
 
 function clickFanta2() {
@@ -82,6 +102,8 @@ function clickFanta2() {
   // når forsvind-animation er færdig: coinGone
   document.querySelector("#fanta2_container").addEventListener("animationend", fanta2Gone);
   decrementLives();
+  //få fanta til at sige en lyd
+  document.querySelector("#sound_fantafart").play();
 }
 
 function clickFanta3() {
@@ -98,6 +120,8 @@ function clickFanta3() {
   // når forsvind-animation er færdig: coinGone
   document.querySelector("#fanta3_container").addEventListener("animationend", fanta3Gone);
   decrementLives();
+  //få fanta til at sige en lyd
+  document.querySelector("#sound_fantafart").play();
 }
 
 /**************************************** COLA ****************************************/
@@ -116,6 +140,9 @@ function clickCola1() {
   // når forsvind-animation er færdig: coinGone
   document.querySelector("#cola1_container").addEventListener("animationend", cola1Gone);
   decrementLives();
+  //få cola til at sige en lyd
+  document.querySelector("#sound_fantafart").play();
+  
 }
 
 function clickCola2() {
@@ -132,6 +159,8 @@ function clickCola2() {
   // når forsvind-animation er færdig: coinGone
   document.querySelector("#cola2_container").addEventListener("animationend", cola2Gone);
   decrementLives();
+  //få cola til at sige en lyd
+  document.querySelector("#sound_fantafart").play();
 }
 
 function clickCola3() {
@@ -148,6 +177,8 @@ function clickCola3() {
   // når forsvind-animation er færdig: coinGone
   document.querySelector("#cola3_container").addEventListener("animationend", cola3Gone);
   decrementLives();
+  //få cola til at sige en lyd
+  document.querySelector("#sound_fantafart").play();
 }
 
 /**************************************** BEER ****************************************/
@@ -166,6 +197,8 @@ function clickBeer1() {
   // når forsvind-animation er færdig: coinGone
   document.querySelector("#beer1_container").addEventListener("animationend", beer1Gone);
   incrementPoints();
+  //få fanta til at sige en lyd
+  document.querySelector("#sound_beer").play();
 }
 
 function clickBeer2() {
@@ -182,6 +215,8 @@ function clickBeer2() {
   // når forsvind-animation er færdig: coinGone
   document.querySelector("#beer2_container").addEventListener("animationend", beer2Gone);
   incrementPoints();
+  //få fanta til at sige en lyd
+  document.querySelector("#sound_beer").play();
 }
 
 function clickBeer3() {
@@ -198,6 +233,8 @@ function clickBeer3() {
   // når forsvind-animation er færdig: coinGone
   document.querySelector("#beer3_container").addEventListener("animationend", beer3Gone);
   incrementPoints();
+  //få fanta til at sige en lyd
+  document.querySelector("#sound_beer").play();
 }
 
 /**************************************** LAPTOP **************************************/
@@ -216,6 +253,8 @@ function clickLaptop() {
   // når forsvind-animation er færdig: coinGone
   document.querySelector("#laptop_container").addEventListener("animationend", laptopGone);
   incrementPoints();
+  //få fanta til at sige en lyd
+  document.querySelector("#sound_laptop").play();
 }
 
 /**************************************** GONE ****************************************/
@@ -484,7 +523,8 @@ function gameOver() {
 function levelComplete() {
   console.log("Level Complete");
   document.querySelector("#level_complete").classList.remove("hidden");
-  gameElementsCleanUp()
+  gameElementsCleanUp();
+  document.querySelector("#sound_fantafart").play();
 }
 
 function gameElementsCleanUp() {

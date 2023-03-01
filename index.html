@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="animationer.css">
-    <script src="app.js"></script>
-    <title>mit-spil</title>
+    <title>Guldbar-spillet</title>
 </head>
 <body>
     <div id="screen">
@@ -17,34 +16,34 @@
             </div>
         </div>
             <div id="game_elements">
-                <div id="cola1_container" class="moveright">
+                <div id="cola1_container">
                     <img id="cola1_sprite" src="images/cola.png">
                 </div>
-                <div id="cola2_container" class="moveright">
+                <div id="cola2_container">
                     <img id="cola2_sprite" src="images/cola.png">
                 </div>
-                <div id="cola3_container" class="moveright">
+                <div id="cola3_container">
                     <img id="cola3_sprite" src="images/cola.png">
                 </div>
-                <div id="beer1_container" class="falling">
+                <div id="beer1_container">
                     <img id="beer1_sprite" src="images/øl.png">
                 </div>
-                <div id="beer2_container" class="falling">
+                <div id="beer2_container">
                     <img id="beer2_sprite" src="images/øl.png">
                 </div>
-                <div id="beer3_container" class="falling">
+                <div id="beer3_container">
                     <img id="beer3_sprite" src="images/øl.png">
                 </div>
-                <div id="fanta1_container" class="falling">
+                <div id="fanta1_container">
                     <img id="fanta1_sprite" src="images/fanta.png">
                 </div>
-                <div id="fanta2_container" class="falling">
+                <div id="fanta2_container">
                     <img id="fanta2_sprite" src="images/fanta.png">
                 </div>
-                <div id="fanta3_container" class="falling">
+                <div id="fanta3_container">
                     <img id="fanta3_sprite" src="images/fanta.png">
                 </div>
-                <div id="laptop_container" class="falling">
+                <div id="laptop_container">
                     <img id="laptop_sprite" src="images/bærbar.png">
                 </div>
             </div>
@@ -67,14 +66,31 @@
                     <img id="heart3_sprite" src="images/hjerte.png">
                 </div>
             </div>
-            <div id="start" class="hidden"></div>
+            <div id="start">
+                <h2>Guldbar-spillet FOR HELVEDE 🤑</h2>
+                <p>COLLECT 15 points before the timer runs out!</p>
+                <button id="button_start" class="pulse">Start</button>
+            </div>
                 <div id="game_over"class="hidden">
-                    <h2 id="game_over_text">GAME OVER</h2>
+                    <h2 id="game_over_text">GAME OVER 😵</h2>
                 </div>
                 <div id="level_complete" class="hidden">
-                    <h2 id="level_complete_text">LEVEL COMPLETE</h2>
+                    <h2 id="level_complete_text">LEVEL COMPLETE 🎉</h2>
                 </div>
+
         </div>
     </div>
+    <audio id="sound_beer" src="/sounds/beer.mp3"></audio>
+    <audio id="sound_fantafart" src="/sounds/fantafart.mp3"></audio>
+    <audio id="sound_cola" src="/sounds/fantafart.mp3"></audio>
+    <audio id="sound_laptop" src="/sounds/laptop.mp3"></audio>
+    <audio id="sound_game_over" src="/sounds/game over.mp3"></audio>
+    <audio id="sound_start" src="/sounds/start.mp3"></audio>
+    <audio id="sound_level_complete" src="/sounds/start.mp3"></audio>
+
+    <script src="app.js"></script>
 </body>
 </html>
+
+
+

@@ -3,6 +3,12 @@ body {
   overflow: hidden;
 }
 
+p {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 1em 0 1.5em;
+}
+
 #screen {
   aspect-ratio: 16/9;
   display: grid;
@@ -10,6 +16,18 @@ body {
   grid-template: 100% / 100%;
   width: 100%;
 }
+
+#start {
+  grid-area: 1 /1;
+  z-index: 999;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-image: linear-gradient(150deg, #20c903 0%, #09793b 100%);
+  color: #ffffff;
+
+}
+
 
 #game {
   grid-area: 1/1;
@@ -291,4 +309,15 @@ body {
 
 .position5 {
   left: 55vw;
+}
+
+button {
+  padding: 0.5em 1em;
+  font-size: 2em;
+  margin: auto;
+  background-color: #ffad01;
+  color: #fff4bf;
+  border: 10px solid #ffc72e;
+  cursor: pointer;
+  border-radius: 10px;
 }
