@@ -35,12 +35,12 @@ function resetLives() {
   lives = 3;
 
   // Nulstiller visning af liv (hjerter vi ser)
-  document.querySelector("#heart1_container;").classList.remove("broken_heart");
-  document.querySelector("#heart2_container;").classList.remove("broken_heart");
-  document.querySelector("#heart3_container;").classList.remove("broken_heart");
-  document.querySelector("#heart1_container;").classList.add("active_heart");
-  document.querySelector("#heart2_container;").classList.add("active_heart");
-  document.querySelector("#heart3_container;").classList.add("active_heart");
+  document.querySelector("#heart1_container").classList.remove("broken_heart");
+  document.querySelector("#heart2_container").classList.remove("broken_heart");
+  document.querySelector("#heart3_container").classList.remove("broken_heart");
+  document.querySelector("#heart1_container").classList.add("active_heart");
+  document.querySelector("#heart2_container").classList.add("active_heart");
+  document.querySelector("#heart3_container").classList.add("active_heart");
 }
 
 function resetPoints() {
@@ -54,7 +54,7 @@ function resetPoints() {
 function startGame() {
   console.log("Starting game");
 
-  resetLives();
+  // resetLives();
   resetPoints();
   showGameScreen();
 
