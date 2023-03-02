@@ -1,12 +1,29 @@
 body {
   margin: 0;
   overflow: hidden;
+  font-family: sans-serif;
+}
+
+h2 {
+    font-size: 4em;
+    margin: 0;
 }
 
 p {
-  text-align: center;
-  font-size: 1.5em;
-  margin: 1em 0 1.5em;
+    text-align: center;
+    font-size: 1.3em;
+    margin: 1em 0;
+}
+
+button {
+  padding: 0.5em 1em;
+  font-size: 2em;
+  margin: auto;
+  background-color: #ffad01;
+  color: #fff4bf;
+  border: 10px solid #ffc72e;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 #screen {
@@ -16,18 +33,6 @@ p {
   grid-template: 100% / 100%;
   width: 100%;
 }
-
-#start {
-  grid-area: 1 /1;
-  z-index: 999;
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  background-image: linear-gradient(150deg, #20c903 0%, #09793b 100%);
-  color: #ffffff;
-
-}
-
 
 #game {
   grid-area: 1/1;
@@ -51,8 +56,62 @@ p {
 
 #game_elements {
   grid-area: 1 /1;
+  overflow: hidden;
+  position: relative;
 }
 
+#game_over {
+  grid-area: 1 /1;
+  z-index: 999;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-image: linear-gradient(150deg, #c90303 0%, #790909 100%);
+  color: #ffffff;
+}
+
+#level_complete,
+#start {
+  grid-area: 1 /1;
+  z-index: 999;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-image: linear-gradient(150deg, #20c903 0%, #09793b 100%);
+  color: #ffffff;
+}
+
+.hidden,
+#game_over.hidden,
+#level_complete.hidden,
+#game.hidden,
+#start.hidden {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************************* POSITIONING ELEMENTS ******************************/
 /************************************************* COLA **********************************************/
 
 #cola1_container {
@@ -163,7 +222,8 @@ p {
   height: 50%;
 }
 
-#laptop_container img {
+/* #laptop_container img { */
+#laptop_sprite {
   width: 50%;
   height: 50%;
 }
@@ -176,8 +236,8 @@ p {
   right: -44%;
   z-index: 2;
 }
-
-#heart1_container img {
+/* #heart1_container img { */
+#heart1_sprite {
   width: 15%;
 }
 
@@ -187,8 +247,8 @@ p {
   right: -39%;
   z-index: 2;
 }
-
-#heart2_container img {
+/* #heart2_container img { */
+#heart2_sprite {
   width: 15%;
 }
 
@@ -198,24 +258,43 @@ p {
   right: -34%;
   z-index: 2;
 }
-
-#heart3_container img {
+/* #heart3_container img { */
+#heart3_sprite {
   width: 15%;
 }
 
-/************************************************* TIMER **********************************************/
+/************************************************* POSITIONING CLASSES *****************************/
 
-#timer_container {
+.position1 {
+  left: 10vw;
+}
+
+.position2 {
+  left: 40vw;
+}
+
+.position3 {
+  left: 70vw;
+}
+
+.position4 {
+  left: 30vw;
+}
+
+.position5 {
+  left: 55vw;
+}
+
+/************************************************* GAME UI *****************************************/
+
+#game_ui {
   position: absolute;
-  top: 1%;
-  left: 45%;
+  top: 2vw;
+  right: 1vw;
+  color: white;
+  font-size: 2em;
+  pointer-events: none;
 }
-
-#timer_container img {
-  width: 40%;
-}
-
-/************************************************* SCOREBOARD *****************************************/
 
 #scoreboard_container {
   position: absolute;
@@ -225,12 +304,207 @@ p {
   z-index: 2%;
 }
 
-#scoreboard img {
+#score_count {
+  white-space: nowrap;
+  text-align: right;
+}
+
+/************************************************* TIMER **********************************************/
+
+#time_board {
+    position: relative;
+}
+
+#time_container {
+    position: absolute;
+    width: 100%;
+    aspect-ratio: 30/6;
+    border: 2px solid black;
+    background-color: rgba(208, 204, 204, 0.383);
+    top: 1.6vh;
+    right: 0.2vw;
+}
+
+#time_sprite {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: limegreen;
+    transform-origin: right;
+}
+
+.active_heart {
+  filter: drop-shadow(0 0 2px yellow);
+}
+
+.broken_heart {
+  filter: grayscale(75%) blur(0.5px);
+}
+
+.paused {
+  animation-play-state: paused;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ************************************************ TIMER *********************************************
+
+#timer_container {
+  position: absolute;
+  top: 1%;
+  left: 45%;
+}
+
+#timer_container img {
+  width: 40%;
+} */
+
+
+
+
+/* #score_image {
+    width: 1em;
+} */
+
+
+
+/* #scoreboard img {
   top: 5%;
   left: 5%;
   width: 20%;
   z-index: 2%;
-}
+} */
+
+
+
+/* 
+
+#game_over {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  color: #c90303;
+} */
+
+
 
 /************************************************* GAME OVER ******************************************/
 
@@ -259,65 +533,8 @@ p {
   z-index: 999;
 } */
 
-#game_over {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  color: #c90303;
-  
-}
 
-#level_complete {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  color: #20c903;
-}
-
-.active_heart {
-  filter: drop-shadow(0 0 2px yellow);
-}
-
-.broken_heart {
-  filter: grayscale(75%) blur(0.5px);
-}
-
-.paused {
-  animation-play-state: paused;
-}
-
-.hidden {
+/* .hidden {
   visibility: hidden;
   display: none;
-}
-
-.position1 {
-  left: 10vw;
-}
-
-.position2 {
-  left: 40vw;
-}
-
-.position3 {
-  left: 70vw;
-}
-
-.position4 {
-  left: 30vw;
-}
-
-.position5 {
-  left: 55vw;
-}
-
-button {
-  padding: 0.5em 1em;
-  font-size: 2em;
-  margin: auto;
-  background-color: #ffad01;
-  color: #fff4bf;
-  border: 10px solid #ffc72e;
-  cursor: pointer;
-  border-radius: 10px;
-}
+} */

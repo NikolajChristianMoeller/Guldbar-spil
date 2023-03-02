@@ -1,6 +1,6 @@
 .falling {
     animation-name: falling;
-    animation-duration: 10s;
+    animation-duration: 7s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -116,5 +116,27 @@
     }
     100% {
         transform: rotate(720deg) scale(0);
+    }
+}
+
+.shrink {
+    animation-name: shrink_kf;
+    animation-duration: 15s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shrink_kf {
+    0% {
+        scale: 1 1;
+        background-color: limegreen;
+    }
+    50% {
+        background-color: rgb(255, 230, 0);
+    }
+    100% {
+        scale: 0 1;
+        background-color: red;
     }
 }

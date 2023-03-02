@@ -11,10 +11,7 @@
 <body>
     <div id="screen">
         <div id="game">
-            <div id="game_background">
-
-            </div>
-        </div>
+            <div id="game_background"></div>
             <div id="game_elements">
                 <div id="cola1_container">
                     <img id="cola1_sprite" src="images/cola.png">
@@ -47,14 +44,9 @@
                     <img id="laptop_sprite" src="images/bærbar.png">
                 </div>
             </div>
-            <div = id="game_foreground"></div>
             <div id="game_ui">
                 <div id="scoreboard_container">
                     <span id="score_count">0</span>
-                    
-                </div>
-                <div id="timer_container">
-                    <img id="timer_sprite" src="images/timer.png" class="glow">
                 </div>
                  <div id="heart1_container" class="pulse"> 
                     <img id="heart1_sprite" src="images/hjerte.png">
@@ -65,19 +57,28 @@
                  <div id="heart3_container" class="pulse"> 
                     <img id="heart3_sprite" src="images/hjerte.png">
                 </div>
+                <div id="time_board">
+                    <div id="time_container">
+                        <div id="time_sprite" class="shrink"></div>
+                    </div>
+                </div>
             </div>
             <div id="start">
-                <h2>Guldbar-spillet FOR HELVEDE 🤑</h2>
-                <p>COLLECT 15 points before the timer runs out!</p>
+                <h2>Velkommen til Guldbar-spillet :))</h2>
+                <p>Kan du samle 15 points før tiden løber ud?</p>
                 <button id="button_start" class="pulse">Start</button>
             </div>
-                <div id="game_over"class="hidden">
-                    <h2 id="game_over_text">GAME OVER 😵</h2>
+                <div id="game_over" class="hidden">
+                    <h2>GAME OVER... Pis...</h2>
+                    <p>Du fik kun <span id=game_over_points">x</span> points!</p>
+                    <p>Du skal opnå 10 points.</p>
+                    <button id="button_restart" class="pulse">Restart Game</button>
                 </div>
                 <div id="level_complete" class="hidden">
-                    <h2 id="level_complete_text">LEVEL COMPLETE 🎉</h2>
+                    <h2>LEVEL COMPLETE! Hvor er du god!</h2>
+                    <p>Tillykke! Du fik <span id="level_complete_points">x</span> points!</p>
+                    <button id="button_go_to_start" class="pulse">Go to start</button>
                 </div>
-
         </div>
     </div>
     <audio id="sound_beer" src="/sounds/beer.mp3"></audio>
@@ -86,8 +87,8 @@
     <audio id="sound_laptop" src="/sounds/laptop.mp3"></audio>
     <audio id="sound_game_over" src="/sounds/game over.mp3"></audio>
     <audio id="sound_start" src="/sounds/start.mp3"></audio>
-    <audio id="sound_level_complete" src="/sounds/start.mp3"></audio>
-
+    <audio id="sound_level_complete" src="/sounds/level complete.mp3"></audio>
+    <audio id="sound_baggrundsmusik" src="/sounds/baggrundsmusik.mp3"></audio>
     <script src="app.js"></script>
 </body>
 </html>
