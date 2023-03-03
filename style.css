@@ -266,10 +266,10 @@ button {
 /************************************************* GAME UI *****************************************/
 
 #game_ui {
-  position: absolute;
+  /* position: absolute; */
   top: 2vw;
   right: 1vw;
-  color: white;
+  color: green;
   font-size: 2em;
   pointer-events: none;
   height: 100%;
@@ -278,8 +278,8 @@ button {
 
 #scoreboard_container {
   position: absolute;
-  top: 5%;
-  left: 5%;
+  top: 90%;
+  left: 4%;
   width: 1%;
   z-index: 2%;
 }
@@ -291,20 +291,18 @@ button {
 
 /************************************************* TIMER **********************************************/
 
-#time_board {
+/* #time_board {
   position: relative;
-}
+} */
 
 #time_container {
   position: absolute;
-  width: 20%;
-  
+  height: 30%;
+  width: 5%;
   aspect-ratio: 6/30;
-  border: 2px solid black;
   background-color: rgba(208, 204, 204, 0.383);
-  top: 8vh;
-  right: 0.2vw;
-  transform: rotate(90deg);
+  top: 5%;
+  left: 3%;
 }
 
 #time_sprite {
@@ -312,7 +310,7 @@ button {
   width: 100%;
   height: 100%;
   background-color: limegreen;
-  transform-origin: center;
+  transform-origin: center bottom;
 }
 
 .active_heart {
@@ -326,67 +324,3 @@ button {
 .paused {
   animation-play-state: paused;
 }
-
-/* ************************************************ TIMER *********************************************
-
-#timer_container {
-  position: absolute;
-  top: 1%;
-  left: 45%;
-}
-
-#timer_container img {
-  width: 40%;
-} */
-
-/* #score_image {
-    width: 1em;
-} */
-
-/* #scoreboard img {
-  top: 5%;
-  left: 5%;
-  width: 20%;
-  z-index: 2%;
-} */
-
-/* 
-
-#game_over {
-  position: absolute;
-  top: 50%;
-  left: 40%;
-  color: #c90303;
-} */
-
-/************************************************* GAME OVER ******************************************/
-
-/* #game_over {
-  position: absolute;
-  grid-area: 1 /1;
-  aspect-ratio: 16/9;
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  background-image: linear-gradient(150deg, #c90303 0%, #790909 100%);
-  color: #ffffff;
-  z-index: 20;
-} */
-
-/************************************************* LEVEL COMPLETE *************************************/
-
-/* #level_complete {
-  position: absolute;
-  grid-area: 1 /1;
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  background-image: linear-gradient(150deg, #20c903 0%, #09793b 100%);
-  color: #ffffff;
-  z-index: 999;
-} */
-
-/* .hidden {
-  visibility: hidden;
-  display: none;
-} */
