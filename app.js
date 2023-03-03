@@ -54,7 +54,7 @@ function resetPoints() {
 function startGame() {
   console.log("Starting game");
 
-  // resetLives();
+  resetLives();
   resetPoints();
   showGameScreen();
 
