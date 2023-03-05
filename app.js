@@ -5,7 +5,6 @@ window.addEventListener("load", ready);
 let points = 0;
 let lives = 0;
 
-
 function ready() {
   console.log("JavaScript ready!");
   document.querySelector("#button_start").addEventListener("click", startGame);
@@ -14,7 +13,6 @@ function ready() {
 }
 
 function showGameScreen() {
-
   // Skjuler startskærm, game over og level complete
   document.querySelector("#start").classList.add("hidden");
   document.querySelector("#game_over").classList.add("hidden");
@@ -22,15 +20,14 @@ function showGameScreen() {
 }
 
 function showStartScreen() {
-
   // Fjerner hidden fra startskærm og tilføjer til game over og level complete
   document.querySelector("#start").classList.remove("hidden");
   document.querySelector("#game_over").classList.add("hidden");
   document.querySelector("#level_complete").classList.add("hidden");
+  resetTimer();
 }
 
 function resetLives() {
-
   // Sætter lives til 3
   lives = 3;
 
@@ -44,11 +41,10 @@ function resetLives() {
 }
 
 function resetPoints() {
-
-    // Nulstiller point
-    points = 0;
-    // Nulstiller vising af point
-    displayPoints();
+  // Nulstiller point
+  points = 0;
+  // Nulstiller vising af point
+  displayPoints();
 }
 
 function startGame() {
@@ -65,7 +61,7 @@ function startGame() {
   startAllAnimations();
 
   // Starter timer
-  startTimer();
+  resetTimer();
 
   // Registrerer click
   document.querySelector("#cola1_container").addEventListener("click", clickCola1);
@@ -139,7 +135,6 @@ function clickFanta1() {
 
   // Får fanta til at sige en lyd
   document.querySelector("#sound_fantafart").play();
-
 }
 
 function clickFanta2() {
@@ -202,7 +197,6 @@ function clickCola1() {
 
   // Får cola til at sige en lyd
   document.querySelector("#sound_fantafart").play();
-  
 }
 
 function clickCola2() {
@@ -310,7 +304,7 @@ function clickBeer3() {
 
 function clickLaptop() {
   console.log("Click laptop");
-  
+
   // Forhindrer gentagne clicks
   document.querySelector("#laptop_container").removeEventListener("click", clickLaptop);
 
@@ -555,7 +549,7 @@ function colaRestart() {
   cola.classList.remove("position1", "position2", "position3", "position4", "position5");
 
   // Sætter position til en ny klasse
-  const p = Math.ceil(Math.random() * 5);
+  const p = Math.ceil(Math.random() * 5) + 1;
   cola.classList.add(`position${p}`);
 }
 
@@ -572,7 +566,7 @@ function fantaRestart() {
   fanta.classList.remove("position1", "position2", "position3", "position4", "position5");
 
   // Sætter position til en ny klasse
-  const p = Math.ceil(Math.random() * 5);
+  const p = Math.ceil(Math.random() * 5) + 1;
   fanta.classList.add(`position${p}`);
 }
 
@@ -589,14 +583,14 @@ function beerRestart() {
   beer.classList.remove("position1", "position2", "position3", "position4", "position5");
 
   // Sætter position til en ny klasse
-  const p = Math.ceil(Math.random() * 5);
+  const p = Math.ceil(Math.random() * 5) + 1;
   beer.classList.add(`position${p}`);
 }
 
 function laptopRestart() {
   console.log("Laptop restart");
   const laptop = this;
-
+  
   // Genstarter falling animationen
   laptop.classList.remove("falling");
   laptop.offsetWidth;
@@ -606,7 +600,7 @@ function laptopRestart() {
   laptop.classList.remove("position1", "position2", "position3", "position4", "position5");
 
   // Sætter position til en ny klasse
-  const p = Math.ceil(Math.random() * 5);
+  const p = Math.ceil(Math.random() * 5) + 1;
   laptop.classList.add(`position${p}`);
 }
 
@@ -631,11 +625,6 @@ function displayDecrementedLives() {
 
 /**************************************** INCREMENT POINTS *****************************/
 
-function showIncrementedLives() {
-  document.querySelector("#heart" + lives).classList.remove("broken_heart");
-  document.querySelector("#heart" + lives).classList.add("active_heart");
-}
-
 function incrementPoints() {
   console.log("Giv point");
   points++;
@@ -658,6 +647,8 @@ function gameOver() {
 
   // Viser antal points
   document.querySelector("#game_over_points").textContent = points;
+  resetTimer();
+  timeIsUp();
 }
 
 /*************************************** LEVEL COMPLETE ********************************/
@@ -672,11 +663,12 @@ function levelComplete() {
 
   // Viser antal points
   document.querySelector("#level_complete_points").textContent = points;
+  // timeIsUp();
 }
-
 /*************************************** TIMER *****************************************/
 
 function startTimer() {
+  console.log("test timer");
 
   // Sætter timer-animationen (shrink) i gang ved at tilføje klassen shrink til time_sprite
   document.querySelector("#time_sprite").classList.add("shrink");
@@ -688,11 +680,21 @@ function startTimer() {
 function timeIsUp() {
   console.log("Tiden er gået!");
 
-  if (points >= 10) {
+  if (points >= 15) {
     levelComplete();
   } else {
     gameOver();
   }
+}
+
+function resetTimer() {
+
+  // Resetter timeren
+  document.querySelector("#time_sprite").removeEventListener("animationend", timeIsUp);
+  document.querySelector("#time_sprite").classList.remove("shrink");
+  document.querySelector("#time_sprite").offsetWidth;
+  document.querySelector("#time_sprite").classList.add("shrink");
+  document.querySelector("#time_sprite").addEventListener("animationend", timeIsUp);
 }
 
 /*************************************** STOP GAME *************************************/
@@ -730,292 +732,3 @@ function stopGame() {
   // Nulstiller timeren - fjerner animationen fra timeren (fjerner klassen shrink fra time_sprite)
   document.querySelector("#time_sprite").classList.remove("shrink");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // Nulstiller points og liv
-  // points = 0;
-  // lives = 3;
-
-  // Skjuler startskærm
-  // document.querySelector("#start").classList.add("hidden");
-
-// function decrementLives() {
-//   console.log("mist et liv");
-
-//   showDecrementedLives();
-//   lives--;
-
-//   if (lives === 0) {
-//     gameOver();
-//   }
-// }
-
-// function decrementPoints() {
-//   points--;
-//   console.log(points);
-//   displayPoints();
-// }
-
-// function incrementPoints() {
-//   console.log("Giv point");
-//   points++;
-//   console.log("Du har nu " + points + " point");
-//   displayPoints();
-
-//   if (points >= 15) {
-//     levelComplete();
-//   }
-// }
-
-// function incrementPoints() {
-//   console.log("Giv point");
-//   //short version
-//   //points += 5
-//   points = points + 5;
-//   console.log("Du har nu " + points + " point");
-//   displayPoints();
-
-//   if (points >= 15) {
-//     levelComplete();
-//   }
-// }
-
-// //bliver kaldt når den når bunden
-// document.querySelector("#laptop_container").addEventListener('animationiteration', test)
-// //bliver kaldt når man klikker på den
-// document.querySelector("#laptop_container").addEventListener('animationend', test)
-
-// function levelComplete() {
-//   console.log("Level Complete");
-//   document.querySelector("#level_complete").classList.remove("hidden");
-//   gameElementsCleanUp();
-//   document.querySelector("#sound_fantafart").play();
-// }
-
-// function gameElementsCleanUp() {
-//   const gameElements = document.querySelector("#game_elements");
-//   gameElements.remove();
-// }
-
-// gameElementsCleanUp();
-
-// function coinGone() {
-//   // fjern event der bringer os herind
-//   document
-//     .querySelector("#coin1_container")
-//     .removeEventListener("animationend", coinGone);
-
-//   // fjern forsvind-animation
-//   document.querySelector("#coin1_sprite").classList.remove("zoom_out");
-
-//   // fjern pause
-//   document.querySelector("#coin1_container").classList.remove("paused");
-
-//   // genstart falling animation
-//   document.querySelector("#coin1_container").classList.remove("falling");
-//   document.querySelector("#coin1_container").offsetWidth;
-//   document.querySelector("#coin1_container").classList.add("falling");
-
-//   // gør det muligt at klikke på coin igen
-//   document
-//     .querySelector("#coin1_container")
-//     .addEventListener("click", clickCoin);
-// }
-
-// function clickBomb() {
-//   console.log("Click bomb");
-//   // Forhindr gentagne clicks
-//   document
-//     .querySelector("#bomb_container")
-//     .removeEventListener("click", clickBomb);
-
-//   // Stop coin container
-//   document.querySelector("#bomb_container").classList.add("paused");
-
-//   // sæt forsvind-animation på coin
-//   document.querySelector("#bomb_sprite").classList.add("zoom_in");
-
-//   // når forsvind-animation er færdig: coinGone
-//   document
-//     .querySelector("#bomb_container")
-//     .addEventListener("animationend", bombGone);
-//   decrementLives();
-// }
-
-// function bombGone() {
-//   // fjern event der bringer os herind
-//   document
-//     .querySelector("#bomb_container")
-//     .removeEventListener("animationend", bombGone);
-
-//   // fjern forsvind-animation
-//   document.querySelector("#bomb_sprite").classList.remove("zoom_in");
-
-//   // fjern pause
-//   document.querySelector("#bomb_container").classList.remove("paused");
-
-//   // genstart falling animation
-//   document.querySelector("#bomb_container").classList.remove("falling");
-//   document.querySelector("#bomb_container").offsetWidth;
-//   document.querySelector("#bomb_container").classList.add("falling");
-
-//   // gør det muligt at klikke på coin igen
-//   document
-//     .querySelector("#bomb_container")
-//     .addEventListener("click", clickBomb);

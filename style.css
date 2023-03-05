@@ -26,6 +26,9 @@ button {
   border-radius: 10px;
 }
 
+img {
+  width: 100%;
+}
 #screen {
   aspect-ratio: 16/9;
   display: grid;
@@ -196,8 +199,8 @@ button {
 
 #laptop_container {
   position: absolute;
-  width: 50%;
-  height: 50%;
+  width: 40%;
+  height: 40%;
 }
 
 /* #laptop_container img { */
@@ -214,7 +217,7 @@ button {
   right: -44%;
   z-index: 2;
 }
-/* #heart1_container img { */
+
 #heart1_sprite {
   width: 15%;
 }
@@ -225,7 +228,7 @@ button {
   right: -39%;
   z-index: 2;
 }
-/* #heart2_container img { */
+
 #heart2_sprite {
   width: 15%;
 }
@@ -236,7 +239,7 @@ button {
   right: -34%;
   z-index: 2;
 }
-/* #heart3_container img { */
+
 #heart3_sprite {
   width: 15%;
 }

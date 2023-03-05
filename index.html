@@ -1,85 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animationer.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animationer.css" />
     <title>Guldbar-spillet</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="screen">
-        <div id="game">
-            <div id="game_background"></div>
-            <div id="game_elements">
-                <div id="cola1_container">
-                    <img id="cola1_sprite" src="images/cola.png">
-                </div>
-                <div id="cola2_container">
-                    <img id="cola2_sprite" src="images/cola.png">
-                </div>
-                <div id="cola3_container">
-                    <img id="cola3_sprite" src="images/cola.png">
-                </div>
-                <div id="beer1_container">
-                    <img id="beer1_sprite" src="images/øl.png">
-                </div>
-                <div id="beer2_container">
-                    <img id="beer2_sprite" src="images/øl.png">
-                </div>
-                <div id="beer3_container">
-                    <img id="beer3_sprite" src="images/øl.png">
-                </div>
-                <div id="fanta1_container">
-                    <img id="fanta1_sprite" src="images/fanta.png">
-                </div>
-                <div id="fanta2_container">
-                    <img id="fanta2_sprite" src="images/fanta.png">
-                </div>
-                <div id="fanta3_container">
-                    <img id="fanta3_sprite" src="images/fanta.png">
-                </div>
-                <div id="laptop_container">
-                    <img id="laptop_sprite" src="images/bærbar.png">
-                </div>
-            </div>
-            <div id="game_ui">
-                <div id="scoreboard_container">
-                    <span id="score_count">0</span>
-                </div>
-                 <div id="heart1_container" class="pulse"> 
-                    <img id="heart1_sprite" src="images/hjerte.png">
-                </div>
-                 <div id="heart2_container" class="pulse"> 
-                    <img id="heart2_sprite" src="images/hjerte.png">
-                </div>
-                 <div id="heart3_container" class="pulse"> 
-                    <img id="heart3_sprite" src="images/hjerte.png">
-                </div>
-                <div id="time_board">
-                    <div id="time_container">
-                        <div id="time_sprite" class="shrink"></div>
-                    </div>
-                </div>
-            </div>
-            <div id="start">
-                <h2>Velkommen til Guldbar-spillet :))</h2>
-                <p>Kan du samle 15 points før tiden løber ud?</p>
-                <button id="button_start" class="pulse">Start</button>
-            </div>
-                <div id="game_over" class="hidden">
-                    <h2>GAME OVER... Pis...</h2>
-                    <p>Du fik kun <span id="game_over_points">x</span> points!</p>
-                    <p>Du skal opnå 15 points.</p>
-                    <button id="button_restart" class="pulse">Restart Game</button>
-                </div>
-                <div id="level_complete" class="hidden">
-                    <h2>LEVEL COMPLETE! Hvor er du god!</h2>
-                    <p>Tillykke! Du fik <span id="level_complete_points">x</span> points!</p>
-                    <button id="button_go_to_start" class="pulse">Go to start</button>
-                </div>
+      <div id="game">
+        <div id="game_background"></div>
+        <div id="game_elements">
+          <div id="cola1_container">
+            <img id="cola1_sprite" src="images/cola.png" />
+          </div>
+          <div id="cola2_container">
+            <img id="cola2_sprite" src="images/cola.png" />
+          </div>
+          <div id="cola3_container">
+            <img id="cola3_sprite" src="images/cola.png" />
+          </div>
+          <div id="beer1_container">
+            <img id="beer1_sprite" src="images/øl.png" />
+          </div>
+          <div id="beer2_container">
+            <img id="beer2_sprite" src="images/øl.png" />
+          </div>
+          <div id="beer3_container">
+            <img id="beer3_sprite" src="images/øl.png" />
+          </div>
+          <div id="fanta1_container">
+            <img id="fanta1_sprite" src="images/fanta.png" />
+          </div>
+          <div id="fanta2_container">
+            <img id="fanta2_sprite" src="images/fanta.png" />
+          </div>
+          <div id="fanta3_container">
+            <img id="fanta3_sprite" src="images/fanta.png" />
+          </div>
+          <div id="laptop_container">
+            <img id="laptop_sprite" src="images/bærbar.png" />
+          </div>
         </div>
+        <div id="game_ui">
+          <div id="scoreboard_container">
+            <span id="score_count">0</span>
+          </div>
+          <div id="heart1_container" class="pulse">
+            <img id="heart1_sprite" src="images/hjerte.png" />
+          </div>
+          <div id="heart2_container" class="pulse">
+            <img id="heart2_sprite" src="images/hjerte.png" />
+          </div>
+          <div id="heart3_container" class="pulse">
+            <img id="heart3_sprite" src="images/hjerte.png" />
+          </div>
+          <div id="time_board">
+            <div id="time_container">
+              <div id="time_sprite"></div>
+            </div>
+          </div>
+        </div>
+        <div id="start">
+          <h2>Velkommen til Guldbar-spillet :))</h2>
+          <p>Kan du samle 15 points før tiden løber ud?</p>
+          <button id="button_start" class="pulse">Start</button>
+        </div>
+        <div id="game_over" class="hidden">
+          <h2>GAME OVER... Pis...</h2>
+          <p>Du fik kun <span id="game_over_points">x</span> points!</p>
+          <p>Du skal opnå 15 points.</p>
+          <button id="button_restart" class="pulse">Restart Game</button>
+        </div>
+        <div id="level_complete" class="hidden">
+          <h2>LEVEL COMPLETE! Hvor er du god!</h2>
+          <p>Tillykke! Du fik <span id="level_complete_points">x</span> points!</p>
+          <button id="button_go_to_start" class="pulse">Go to start</button>
+        </div>
+      </div>
     </div>
     <audio id="sound_beer" src="/sounds/beer.mp3"></audio>
     <audio id="sound_fantafart" src="/sounds/fantafart.mp3"></audio>
@@ -90,8 +90,5 @@
     <audio id="sound_level_complete" src="/sounds/level complete.mp3"></audio>
     <audio id="sound_baggrundsmusik" src="/sounds/baggrundsmusik.mp3"></audio>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
-
-
-

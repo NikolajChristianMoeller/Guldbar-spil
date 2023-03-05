@@ -1,6 +1,6 @@
 .falling {
     animation-name: falling;
-    animation-duration: 7s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -121,7 +121,7 @@
 
 .shrink {
     animation-name: shrink_kf;
-    animation-duration: 60s;
+    animation-duration: 45s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
@@ -129,7 +129,7 @@
 
 @keyframes shrink_kf {
     0% {
-        scale: 1 1;
+        /* scale: 1 1; */
         background-color: limegreen;
     }
     50% {
