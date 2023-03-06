@@ -24,6 +24,7 @@ function showStartScreen() {
   document.querySelector("#start").classList.remove("hidden");
   document.querySelector("#game_over").classList.add("hidden");
   document.querySelector("#level_complete").classList.add("hidden");
+  document.querySelector("#game").classList.add("zoom_in");
   resetTimer();
 }
 
@@ -57,6 +58,8 @@ function startGame() {
   // Starter baggrundsmusik
   document.querySelector("#sound_baggrundsmusik").play();
 
+  document.querySelector("#game").classList.add("zoom_in");
+
   // Starter animationer
   startAllAnimations();
 
@@ -76,16 +79,16 @@ function startGame() {
   document.querySelector("#laptop_container").addEventListener("click", clickLaptop);
 
   // Registrerer når bunden rammes
-  document.querySelector("#cola1_container").addEventListener("animationiteration", colaRestart);
-  document.querySelector("#cola2_container").addEventListener("animationiteration", colaRestart);
-  document.querySelector("#cola3_container").addEventListener("animationiteration", colaRestart);
-  document.querySelector("#fanta1_container").addEventListener("animationiteration", fantaRestart);
-  document.querySelector("#fanta2_container").addEventListener("animationiteration", fantaRestart);
-  document.querySelector("#fanta3_container").addEventListener("animationiteration", fantaRestart);
-  document.querySelector("#beer1_container").addEventListener("animationiteration", beerRestart);
-  document.querySelector("#beer2_container").addEventListener("animationiteration", beerRestart);
-  document.querySelector("#beer3_container").addEventListener("animationiteration", beerRestart);
-  document.querySelector("#laptop_container").addEventListener("animationiteration", laptopRestart);
+  // document.querySelector("#cola1_container").addEventListener("animationiteration", colaRestart);
+  // document.querySelector("#cola2_container").addEventListener("animationiteration", colaRestart);
+  // document.querySelector("#cola3_container").addEventListener("animationiteration", colaRestart);
+  // document.querySelector("#fanta1_container").addEventListener("animationiteration", fantaRestart);
+  // document.querySelector("#fanta2_container").addEventListener("animationiteration", fantaRestart);
+  // document.querySelector("#fanta3_container").addEventListener("animationiteration", fantaRestart);
+  // document.querySelector("#beer1_container").addEventListener("animationiteration", beerRestart);
+  // document.querySelector("#beer2_container").addEventListener("animationiteration", beerRestart);
+  // document.querySelector("#beer3_container").addEventListener("animationiteration", beerRestart);
+  // document.querySelector("#laptop_container").addEventListener("animationiteration", laptopRestart);
 }
 
 function startAllAnimations() {
@@ -147,7 +150,7 @@ function clickFanta2() {
   document.querySelector("#fanta2_container").classList.add("paused");
 
   // Sætter forsvind-animationen på coin
-  document.querySelector("#fanta2_container").classList.add("zoom_out");
+  document.querySelector("#fanta2_sprite").classList.add("zoom_out");
 
   // Når forsvind-animationen er færdig: fantaGone
   document.querySelector("#fanta2_container").addEventListener("animationend", fanta2Gone);
@@ -167,7 +170,7 @@ function clickFanta3() {
   document.querySelector("#fanta3_container").classList.add("paused");
 
   // Sætter forsvind-animationen på fanta
-  document.querySelector("#fanta3_container").classList.add("zoom_out");
+  document.querySelector("#fanta3_sprite").classList.add("zoom_out");
 
   // Når forsvind-animationen er færdig: fantaGone
   document.querySelector("#fanta3_container").addEventListener("animationend", fanta3Gone);
@@ -536,73 +539,73 @@ function laptopGone() {
 
 /**************************************** RESTART *************************************/
 
-function colaRestart() {
-  console.log("Cola restart");
-  const cola = this;
+// function colaRestart() {
+//   console.log("Cola restart");
+//   const cola = this;
 
-  // Genstarter falling animationen
-  cola.classList.remove("moveright");
-  cola.offsetWidth;
-  cola.classList.add("moveright");
+//   // Genstarter falling animationen
+//   cola.classList.remove("moveright");
+//   cola.offsetWidth;
+//   cola.classList.add("moveright");
 
-  // Fjerner alle positioner
-  cola.classList.remove("position1", "position2", "position3", "position4", "position5");
+//   // Fjerner alle positioner
+//   cola.classList.remove("position1", "position2", "position3", "position4", "position5");
 
-  // Sætter position til en ny klasse
-  const p = Math.ceil(Math.random() * 5) + 1;
-  cola.classList.add(`position${p}`);
-}
+//   // Sætter position til en ny klasse
+//   const p = Math.ceil(Math.random() * 5) + 1;
+//   cola.classList.add(`position${p}`);
+// }
 
-function fantaRestart() {
-  console.log("Fanta restart");
-  const fanta = this;
+// function fantaRestart() {
+//   console.log("Fanta restart");
+//   const fanta = this;
 
-  // Genstarter falling animationen
-  fanta.classList.remove("falling");
-  fanta.offsetWidth;
-  fanta.classList.add("falling");
+//   // Genstarter falling animationen
+//   fanta.classList.remove("falling");
+//   fanta.offsetWidth;
+//   fanta.classList.add("falling");
 
-  // Fjerner alle positioner
-  fanta.classList.remove("position1", "position2", "position3", "position4", "position5");
+//   // Fjerner alle positioner
+//   fanta.classList.remove("position1", "position2", "position3", "position4", "position5");
 
-  // Sætter position til en ny klasse
-  const p = Math.ceil(Math.random() * 5) + 1;
-  fanta.classList.add(`position${p}`);
-}
+//   // Sætter position til en ny klasse
+//   const p = Math.ceil(Math.random() * 5) + 1;
+//   fanta.classList.add(`position${p}`);
+// }
 
-function beerRestart() {
-  console.log("Beer restart");
-  const beer = this;
+// function beerRestart() {
+//   console.log("Beer restart");
+//   const beer = this;
 
-  // Genstarter falling animationen
-  beer.classList.remove("falling");
-  beer.offsetWidth;
-  beer.classList.add("falling");
+//   // Genstarter falling animationen
+//   beer.classList.remove("falling");
+//   beer.offsetWidth;
+//   beer.classList.add("falling");
 
-  // Fjerner alle positioner
-  beer.classList.remove("position1", "position2", "position3", "position4", "position5");
+//   // Fjerner alle positioner
+//   beer.classList.remove("position1", "position2", "position3", "position4", "position5");
 
-  // Sætter position til en ny klasse
-  const p = Math.ceil(Math.random() * 5) + 1;
-  beer.classList.add(`position${p}`);
-}
+//   // Sætter position til en ny klasse
+//   const p = Math.ceil(Math.random() * 5) + 1;
+//   beer.classList.add(`position${p}`);
+// }
 
-function laptopRestart() {
-  console.log("Laptop restart");
-  const laptop = this;
-  
-  // Genstarter falling animationen
-  laptop.classList.remove("falling");
-  laptop.offsetWidth;
-  laptop.classList.add("falling");
+// function laptopRestart() {
+//   console.log("Laptop restart");
+//   const laptop = this;
 
-  // Fjerner alle positioner
-  laptop.classList.remove("position1", "position2", "position3", "position4", "position5");
+//   // Genstarter falling animationen
+//   laptop.classList.remove("falling");
+//   laptop.offsetWidth;
+//   laptop.classList.add("falling");
 
-  // Sætter position til en ny klasse
-  const p = Math.ceil(Math.random() * 5) + 1;
-  laptop.classList.add(`position${p}`);
-}
+//   // Fjerner alle positioner
+//   laptop.classList.remove("position1", "position2", "position3", "position4", "position5");
+
+//   // Sætter position til en ny klasse
+//   const p = Math.ceil(Math.random() * 5) + 1;
+//   laptop.classList.add(`position${p}`);
+// }
 
 /**************************************** DECREMENT ***********************************/
 
@@ -655,7 +658,9 @@ function gameOver() {
 
 function levelComplete() {
   console.log("Level Complete");
+  document.querySelector("#level_complete").classList.add("zoom_in");
   document.querySelector("#level_complete").classList.remove("hidden");
+
   stopGame();
 
   // Afspiller level_complete lyd
@@ -688,7 +693,6 @@ function timeIsUp() {
 }
 
 function resetTimer() {
-
   // Resetter timeren
   document.querySelector("#time_sprite").removeEventListener("animationend", timeIsUp);
   document.querySelector("#time_sprite").classList.remove("shrink");
@@ -700,7 +704,6 @@ function resetTimer() {
 /*************************************** STOP GAME *************************************/
 
 function stopGame() {
-
   // Stopper animationerne
   document.querySelector("#fanta1_container").classList.remove("falling");
   document.querySelector("#fanta2_container").classList.remove("falling");
@@ -731,4 +734,6 @@ function stopGame() {
 
   // Nulstiller timeren - fjerner animationen fra timeren (fjerner klassen shrink fra time_sprite)
   document.querySelector("#time_sprite").classList.remove("shrink");
+
+  document.querySelector("#game").classList.remove("zoom_in");
 }

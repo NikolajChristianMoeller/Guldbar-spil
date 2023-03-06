@@ -2,6 +2,7 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: sans-serif;
+  user-select: none;
 }
 
 h2 {
@@ -133,7 +134,7 @@ img {
 #fanta1_container {
   position: absolute;
   left: 25%;
-  top: 75%;
+  top: 0%;
   width: 50%;
 }
 
@@ -144,7 +145,7 @@ img {
 #fanta2_container {
   position: absolute;
   left: 25%;
-  top: 50%;
+  top: -50%;
   width: 50%;
 }
 
@@ -155,7 +156,7 @@ img {
 #fanta3_container {
   position: absolute;
   left: 25%;
-  top: 25%;
+  top: -25%;
   width: 50%;
 }
 
