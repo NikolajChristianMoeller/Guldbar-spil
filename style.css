@@ -204,7 +204,6 @@ img {
   height: 40%;
 }
 
-/* #laptop_container img { */
 #laptop_sprite {
   width: 50%;
   height: 50%;
@@ -270,7 +269,6 @@ img {
 /************************************************* GAME UI *****************************************/
 
 #game_ui {
-  /* position: absolute; */
   top: 2vw;
   right: 1vw;
   color: green;
@@ -294,10 +292,6 @@ img {
 }
 
 /************************************************* TIMER **********************************************/
-
-/* #time_board {
-  position: relative;
-} */
 
 #time_container {
   position: absolute;

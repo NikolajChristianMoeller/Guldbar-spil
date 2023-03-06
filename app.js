@@ -13,6 +13,7 @@ function ready() {
 }
 
 function showGameScreen() {
+
   // Skjuler startskærm, game over og level complete
   document.querySelector("#start").classList.add("hidden");
   document.querySelector("#game_over").classList.add("hidden");
@@ -20,15 +21,19 @@ function showGameScreen() {
 }
 
 function showStartScreen() {
-  // Fjerner hidden fra startskærm og tilføjer til game over og level complete
+
+  // Fjerner hidden fra startskærm og tilføjer til game over og level complete, tilføjer også zoom in til start screen
   document.querySelector("#start").classList.remove("hidden");
   document.querySelector("#game_over").classList.add("hidden");
   document.querySelector("#level_complete").classList.add("hidden");
   document.querySelector("#game").classList.add("zoom_in");
+
+  // Resetter timeren
   resetTimer();
 }
 
 function resetLives() {
+
   // Sætter lives til 3
   lives = 3;
 
@@ -42,8 +47,10 @@ function resetLives() {
 }
 
 function resetPoints() {
+
   // Nulstiller point
   points = 0;
+
   // Nulstiller vising af point
   displayPoints();
 }
@@ -51,6 +58,7 @@ function resetPoints() {
 function startGame() {
   console.log("Starting game");
 
+  // Resetter lives, points og viser game screen
   resetLives();
   resetPoints();
   showGameScreen();
@@ -58,6 +66,7 @@ function startGame() {
   // Starter baggrundsmusik
   document.querySelector("#sound_baggrundsmusik").play();
 
+  // Fjerner zoom in animationen og tilføjer den igen
   document.querySelector("#game").classList.remove("zoom_in");
   document.querySelector("#game").offsetWidth
   document.querySelector("#game").classList.add("zoom_in");
@@ -65,7 +74,7 @@ function startGame() {
   // Starter animationer
   startAllAnimations();
 
-  // Starter timer
+  // Starter / resetter timer
   resetTimer();
 
   // Registrerer click
@@ -94,6 +103,7 @@ function startGame() {
 }
 
 function startAllAnimations() {
+
   // Starter falling animationer
   document.querySelector("#cola1_container").classList.add("moveright");
   document.querySelector("#cola2_container").classList.add("moveright");
@@ -647,13 +657,18 @@ function displayPoints() {
 function gameOver() {
   console.log("Game Over");
   document.querySelector("#game_over").classList.remove("hidden");
+
+  // Stopper spillet
   stopGame();
+
+  // Afspiller game over lyd
   document.querySelector("#sound_game_over").play();
 
   // Viser antal points
   document.querySelector("#game_over_points").textContent = points;
+  
+  // Resetter timeren
   resetTimer();
- // timeIsUp();
 }
 
 /*************************************** LEVEL COMPLETE ********************************/
@@ -663,6 +678,7 @@ function levelComplete() {
   document.querySelector("#level_complete").classList.add("zoom_in");
   document.querySelector("#level_complete").classList.remove("hidden");
 
+  // Stopper spillet
   stopGame();
 
   // Afspiller level_complete lyd
@@ -670,8 +686,8 @@ function levelComplete() {
 
   // Viser antal points
   document.querySelector("#level_complete_points").textContent = points;
-  // timeIsUp();
 }
+
 /*************************************** TIMER *****************************************/
 
 function startTimer() {
@@ -695,6 +711,7 @@ function timeIsUp() {
 }
 
 function resetTimer() {
+
   // Resetter timeren
   document.querySelector("#time_sprite").removeEventListener("animationend", timeIsUp);
   document.querySelector("#time_sprite").classList.remove("shrink");
@@ -706,6 +723,7 @@ function resetTimer() {
 /*************************************** STOP GAME *************************************/
 
 function stopGame() {
+
   // Stopper animationerne
   document.querySelector("#fanta1_container").classList.remove("falling");
   document.querySelector("#fanta2_container").classList.remove("falling");
@@ -737,5 +755,6 @@ function stopGame() {
   // Nulstiller timeren - fjerner animationen fra timeren (fjerner klassen shrink fra time_sprite)
   document.querySelector("#time_sprite").classList.remove("shrink");
 
+  // Fjerner zoom in animation fra game
   document.querySelector("#game").classList.remove("zoom_in");
 }
