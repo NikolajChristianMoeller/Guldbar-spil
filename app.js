@@ -58,6 +58,8 @@ function startGame() {
   // Starter baggrundsmusik
   document.querySelector("#sound_baggrundsmusik").play();
 
+  document.querySelector("#game").classList.remove("zoom_in");
+  document.querySelector("#game").offsetWidth
   document.querySelector("#game").classList.add("zoom_in");
 
   // Starter animationer
@@ -651,7 +653,7 @@ function gameOver() {
   // Viser antal points
   document.querySelector("#game_over_points").textContent = points;
   resetTimer();
-  timeIsUp();
+ // timeIsUp();
 }
 
 /*************************************** LEVEL COMPLETE ********************************/
